@@ -1,0 +1,90 @@
+properties:
+  file.name:
+    displayName: Property
+  file.mtime:
+    displayName: Updated
+  status:
+    displayName: Phase
+  city:
+    displayName: City
+  address:
+    displayName: Address
+  units:
+    displayName: Units
+  occupancy:
+    displayName: Occ %
+  occupancy_as_of:
+    displayName: As of
+  property:
+    displayName: Property
+  type:
+    displayName: Type
+  origin:
+    displayName: Origin
+  created:
+    displayName: Created
+views:
+  - type: table
+    name: All Properties
+    filters:
+      and:
+        - file.folder == "02 Portfolio"
+        - type == "property"
+    order:
+      - file.name
+      - city
+      - status
+      - units
+      - occupancy
+      - occupancy_as_of
+      - file.mtime
+    sort:
+      - property: status
+        direction: ASC
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Missing Numbers
+    filters:
+      and:
+        - file.folder == "02 Portfolio"
+        - type == "property"
+        - status != "disposed"
+        - units == ""
+    order:
+      - file.name
+      - city
+      - address
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Occupancy
+    filters:
+      and:
+        - file.folder == "02 Portfolio"
+        - type == "property"
+        - status == "operating"
+    order:
+      - file.name
+      - units
+      - occupancy
+      - occupancy_as_of
+    sort:
+      - property: occupancy
+        direction: ASC
+  - type: cards
+    name: Cards
+    filters:
+      and:
+        - file.folder == "02 Portfolio"
+        - type == "property"
+        - status != "disposed"
+    order:
+      - file.name
+      - city
+      - status
+      - units
+    sort:
+      - property: file.name
+        direction: ASC

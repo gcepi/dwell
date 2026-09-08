@@ -1,0 +1,194 @@
+/* DWELL dashboards. Sibling of gos-home.css, tuned for reading numbers. */
+
+/*
+  gOS runs a warm gold accent (#807047) at roughly 39% lightness and 28%
+  saturation. DWELL takes the same lightness and saturation and rotates the
+  hue to a slate teal, so the two vaults read as one designer's work while
+  never being mistaken for each other at a glance.
+
+  The structural differences are deliberate, not decorative:
+  left rules instead of underlines, 6px corners instead of 15px, tighter
+  vertical rhythm, and tabular figures in every table. gOS is a place to
+  browse. This is a place to check a number and leave.
+*/
+
+.dwell-home {
+  --dwell-accent: #42756c;
+  --dwell-flag: #b07426;
+  --dwell-rule: color-mix(in srgb, var(--dwell-accent) 26%, var(--background-modifier-border));
+  --line-width: 62rem;
+  --h1-size: 2.1em;
+  --h2-size: 1.32em;
+  --h3-size: 1.05em;
+  --h1-weight: 700;
+  --h2-weight: 660;
+  --h3-weight: 640;
+  --h1-line-height: 1.12;
+  --h2-line-height: 1.2;
+}
+
+.dwell-home .metadata-container {
+  display: none;
+}
+
+.dwell-home .markdown-preview-sizer,
+.dwell-home .cm-sizer {
+  padding-bottom: 14vh;
+}
+
+/* H1 greets you once. Set it off with a hairline and move on. */
+.dwell-home.markdown-rendered h1,
+.dwell-home .markdown-rendered h1 {
+  padding-bottom: 0.5em;
+  border-bottom: 1px solid var(--dwell-rule);
+  letter-spacing: -0.012em;
+}
+
+/* Section headings get a left rule. Reads like a document margin. */
+.dwell-home.markdown-rendered h2,
+.dwell-home .markdown-rendered h2,
+.dwell-home .HyperMD-header-2 {
+  margin-top: 2.1em;
+}
+
+.dwell-home.markdown-rendered h2,
+.dwell-home .markdown-rendered h2 {
+  padding-left: 0.62em;
+  border-left: 3px solid var(--dwell-accent);
+  line-height: 1.2;
+}
+
+/* Tables are the point of this vault. Make the columns line up. */
+.dwell-home table {
+  font-size: 0.92em;
+  font-variant-numeric: tabular-nums;
+  border-collapse: collapse;
+}
+
+.dwell-home th {
+  font-size: 0.78em;
+  font-weight: 640;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  border-bottom: 1px solid var(--dwell-rule);
+}
+
+.dwell-home td,
+.dwell-home th {
+  padding: 5px 10px;
+}
+
+.dwell-home .bases-table-cell,
+.dwell-home .bases-view {
+  font-variant-numeric: tabular-nums;
+}
+
+/* A blank cell should look intentionally blank, not broken. */
+.dwell-home td:empty::after {
+  content: "·";
+  color: var(--text-faint);
+}
+
+/* Callouts: squared corners, a left rule, no drop shadow. */
+.dwell-home .callout {
+  margin: 0.95em 0;
+  padding: 10px 14px;
+  border: 1px solid var(--background-modifier-border);
+  border-left: 3px solid rgb(var(--callout-color));
+  border-radius: 6px;
+  box-shadow: none;
+}
+
+.dwell-home .callout-title {
+  font-size: 0.8em;
+  font-weight: 650;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+}
+
+.dwell-home .callout .bases-view {
+  margin: 0.3em 0;
+}
+
+.dwell-home .callout p:last-child {
+  margin-bottom: 0;
+}
+
+/* The one thing you read first. */
+.dwell-home .callout[data-callout="today"] {
+  --callout-color: 66, 117, 108;
+  --callout-icon: lucide-sunrise;
+  padding: 14px 16px;
+  border-left-width: 4px;
+  background: linear-gradient(100deg, rgba(66, 117, 108, 0.13), var(--background-primary-alt));
+}
+
+/* Waiting on Graham. The only warm colour in the file, used only here. */
+.dwell-home .callout[data-callout="decide"] {
+  --callout-color: 176, 116, 38;
+  --callout-icon: lucide-gavel;
+}
+
+.dwell-home .callout[data-callout="portfolio"] {
+  --callout-color: 66, 117, 108;
+  --callout-icon: lucide-building-2;
+}
+
+.dwell-home .callout[data-callout="work"] {
+  --callout-color: 77, 96, 138;
+  --callout-icon: lucide-briefcase;
+}
+
+.dwell-home .callout[data-callout="ahead"] {
+  --callout-color: 54, 110, 150;
+  --callout-icon: lucide-calendar-days;
+}
+
+.dwell-home .callout[data-callout="people"] {
+  --callout-color: 130, 96, 148;
+  --callout-icon: lucide-users;
+}
+
+.dwell-home .callout[data-callout="learn"] {
+  --callout-color: 72, 124, 84;
+  --callout-icon: lucide-pencil-line;
+}
+
+.dwell-home .callout[data-callout="book"] {
+  --callout-color: 108, 116, 122;
+  --callout-icon: lucide-book-open;
+}
+
+.dwell-home .callout[data-callout="system"] {
+  --callout-color: 112, 120, 129;
+  --callout-icon: lucide-activity;
+}
+
+/* Every list item in a decision queue is something to open. */
+.dwell-home .callout[data-callout="decide"] .bases-view[data-view-type="list"] a.internal-link::after,
+.dwell-home .callout[data-callout="today"] .bases-view[data-view-type="list"] a.internal-link::after {
+  content: " →";
+  color: var(--text-faint);
+}
+
+/* The footer row of links is navigation, not prose. */
+.dwell-home.markdown-rendered h2 + p a.internal-link,
+.dwell-home .markdown-rendered > p:last-child {
+  font-size: 0.94em;
+}
+
+@media (max-width: 700px) {
+  .dwell-home {
+    --h1-size: 1.75em;
+    --h2-size: 1.22em;
+  }
+
+  .dwell-home table {
+    font-size: 0.86em;
+  }
+
+  .dwell-home .callout {
+    padding: 9px 11px;
+  }
+}

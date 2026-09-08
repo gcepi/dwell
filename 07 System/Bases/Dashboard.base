@@ -1,0 +1,195 @@
+properties:
+  file.name:
+    displayName: Note
+  file.mtime:
+    displayName: Updated
+  type:
+    displayName: Type
+  status:
+    displayName: Status
+  city:
+    displayName: City
+  units:
+    displayName: Units
+  occupancy:
+    displayName: Occ %
+  occupancy_as_of:
+    displayName: As of
+  target_date:
+    displayName: Target
+  owner:
+    displayName: Owner
+  review_due:
+    displayName: Review due
+  role:
+    displayName: Role
+  org:
+    displayName: Org
+  relationship:
+    displayName: Relationship
+  attention:
+    displayName: Attention
+  created:
+    displayName: Created
+  origin:
+    displayName: Origin
+  category:
+    displayName: Category
+  property:
+    displayName: Property
+  project:
+    displayName: Project
+views:
+  - type: table
+    name: Portfolio
+    filters:
+      and:
+        - file.folder == "02 Portfolio"
+        - type == "property"
+        - status != "disposed"
+    order:
+      - file.name
+      - city
+      - status
+      - units
+      - occupancy
+      - occupancy_as_of
+    sort:
+      - property: status
+        direction: ASC
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Active Projects
+    filters:
+      and:
+        - file.folder == "04 Projects"
+        - type == "project"
+        - status == "active"
+    order:
+      - file.name
+      - target_date
+      - file.mtime
+    sort:
+      - property: target_date
+        direction: ASC
+  - type: list
+    name: Procedure Drafts
+    filters:
+      and:
+        - file.folder == "06 Playbook/Procedures"
+        - type == "sop"
+        - status == "draft"
+    order:
+      - file.name
+      - owner
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 8
+  - type: list
+    name: Needs Review
+    filters:
+      and:
+        - file.folder == "07 System/Inbox/Needs Review"
+        - type == "capture"
+        - status == "needs-review"
+    order:
+      - file.name
+      - origin
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 10
+  - type: list
+    name: Unreviewed AI Results
+    filters:
+      and:
+        - file.folder == "06 Playbook/Reference"
+        - type == "resource"
+        - origin == "ai"
+        - status == "ready"
+    order:
+      - file.name
+      - created
+      - property
+    sort:
+      - property: created
+        direction: DESC
+    limit: 8
+  - type: list
+    name: People Needing Attention
+    filters:
+      and:
+        - file.folder == "03 People"
+        - type == "contact"
+        - attention != ""
+    order:
+      - file.name
+      - role
+      - attention
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: list
+    name: Upcoming Meetings
+    filters:
+      and:
+        - file.folder == "05 Meetings"
+        - type == "meeting"
+        - status == "planned"
+    order:
+      - file.name
+      - created
+      - property
+    sort:
+      - property: created
+        direction: DESC
+    limit: 8
+  - type: list
+    name: Recent Field Notes
+    filters:
+      and:
+        - file.folder == "06 Playbook/Field notes"
+        - file.ext == "md"
+    order:
+      - file.name
+      - category
+      - file.mtime
+    sort:
+      - property: file.mtime
+        direction: DESC
+    limit: 6
+  - type: list
+    name: Active Procedures
+    filters:
+      and:
+        - file.folder == "06 Playbook/Procedures"
+        - type == "sop"
+        - status == "active"
+    order:
+      - file.name
+      - owner
+      - review_due
+    sort:
+      - property: file.name
+        direction: ASC
+    limit: 10
+  - type: list
+    name: Latest Run Log
+    filters:
+      and:
+        - file.folder == "07 System/Logs"
+        - type == "automation-log"
+    order:
+      - file.name
+      - status
+      - created
+    sort:
+      - property: created
+        direction: DESC
+      - property: file.name
+        direction: DESC
+    limit: 1

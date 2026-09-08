@@ -1,0 +1,96 @@
+properties:
+  file.name:
+    displayName: Person
+  file.mtime:
+    displayName: Updated
+  role:
+    displayName: Role
+  org:
+    displayName: Org
+  relationship:
+    displayName: Relationship
+  attention:
+    displayName: Attention
+  status:
+    displayName: Status
+  type:
+    displayName: Type
+views:
+  - type: table
+    name: Everyone
+    filters:
+      and:
+        - file.folder == "03 People"
+        - type == "contact"
+        - status == "active"
+    order:
+      - file.name
+      - role
+      - org
+      - relationship
+      - attention
+    sort:
+      - property: relationship
+        direction: ASC
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Internal
+    filters:
+      and:
+        - file.folder == "03 People"
+        - type == "contact"
+        - relationship == "internal"
+    order:
+      - file.name
+      - role
+      - attention
+      - file.mtime
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Vendors
+    filters:
+      and:
+        - file.folder == "03 People"
+        - type == "contact"
+        - relationship == "vendor"
+    order:
+      - file.name
+      - role
+      - org
+      - file.mtime
+    sort:
+      - property: org
+        direction: ASC
+  - type: table
+    name: Needs Attention
+    filters:
+      and:
+        - file.folder == "03 People"
+        - type == "contact"
+        - attention != ""
+    order:
+      - file.name
+      - role
+      - relationship
+      - attention
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: table
+    name: Inactive
+    filters:
+      and:
+        - file.folder == "03 People"
+        - type == "contact"
+        - status == "inactive"
+    order:
+      - file.name
+      - role
+      - org
+      - relationship
+    sort:
+      - property: file.name
+        direction: ASC
