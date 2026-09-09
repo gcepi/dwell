@@ -41,8 +41,7 @@ The two or three ways this goes wrong and what to do about each one. Who to esca
 <!--
 No H1. The filename is the procedure name.
 Statuses: draft | active | retired.
-An agent may draft and revise freely. Only Graham sets status: active, because
-that turns a draft into the company's answer.
+An agent may draft and revise freely. Only Graham sets status: active.
 A retired procedure stays here with a dated line saying what replaced it.
 Write it for someone in their second week on the job.
 -->

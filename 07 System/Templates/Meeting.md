@@ -11,7 +11,7 @@ One sentence. What has to be true when this meeting ends.
 ## Prep
 
 - What to read or pull beforehand.
-- What to ask. In the learning phase this is the most valuable line on the page.
+- What to ask.
 
 ## Notes
 

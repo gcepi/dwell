@@ -19,7 +19,9 @@ Prior background is 5 years in mission-driven startups: consulting service deliv
 
 ## The portfolio
 
-Six properties on the company website, all metro Atlanta, every one a 1965 to 1986 building bought and renovated. Notes are in `02 Portfolio/`, and the index at `02 Portfolio/_Portfolio.md` has the shape of it.
+Six properties, all metro Atlanta, every one a 1965 to 1986 building bought and renovated. Notes are in `02 Portfolio/`, and the index at `02 Portfolio/_Portfolio.md` has the shape of it.
+
+Houston was sold and is out of the portfolio. Dwell's public copy still lists it as a market.
 
 Three sit on one stretch of Hollywood Road on Atlanta's Westside and share a leasing email. Two are separately branded and never show the Dwell name to residents. One is 55-plus. One is the headquarters and the only property with published construction phasing.
 
@@ -27,7 +29,7 @@ Names, addresses, and cities came off Dwell's own pages on 2026-09-08. Unit coun
 
 ## The first project
 
-Implementing Elise.ai. The point is operational and political at once: it delivers a real result, and it establishes Graham as the person in the organization who understands the technology. That credibility is what the move into leadership runs on. Treat it as the flagship project, not as an IT ticket.
+Implementing Elise.ai. It delivers an operational result and it establishes Graham as the person in the organization who understands the technology. Treat it as the flagship project.
 
 The scope is larger than the name suggests. There is no property management software of record. Assessing the options, deciding on a migration, and running the change is project one, and Elise sits on top of whatever gets chosen.
 
@@ -35,10 +37,8 @@ The scope is larger than the name suggests. There is no property management soft
 
 Two jobs in the first 90 days.
 
-1. **Write down how the business actually works.** Every walkthrough, every ride-along, every "that's just how we do it" answer becomes a field note in `06 Playbook/Field notes/` and then a procedure draft in `06 Playbook/Procedures/`. Most of what's worth capturing right now has never been written down by anyone, and the window where it's natural to ask closes fast.
+1. **Write down how the business actually works.** Every walkthrough, every ride-along, every "that's just how we do it" answer becomes a field note in `06 Playbook/Field notes/` and then a procedure draft in `06 Playbook/Procedures/`.
 2. **Run the work.** Properties, projects, tasks, meetings, people.
-
-The first one is easy to skip because it feels like homework. It is the more valuable of the two, so the dashboard asks about it every morning.
 
 ## The first people
 
@@ -53,6 +53,5 @@ Dwell also partners with Uplift GA, a nonprofit that works on social capital amo
 - **Unit counts and occupancy for all 6 properties.** The public numbers conflict, badly in one case. Nothing goes in the `units` or `occupancy` fields until it comes off a rent roll.
 - **What the business calls the phases of a property.** The schema uses `prospect` · `acquiring` · `renovating` · `stabilizing` · `operating` · `disposed`. Dwell publishes no lifecycle language anywhere, so all six words are a guess.
 - **The seventh property.** Dwell's own LinkedIn says 7 properties and 1,027 units. The website lists 6, summing to roughly 1,016.
-- **Houston.** The same LinkedIn copy claims Atlanta and Houston. No Texas asset turned up in any search. Aspirational, stale, or unlisted.
-- **Whether the three Hollywood Road properties are one operating unit or three.** This decides whether a procedure written for "a property" means a building or a cluster.
+- **Whether the three Hollywood Road properties are one operating unit or three.** Unknown, and it blocks work. It decides whether a procedure written for "a property" means a building or a cluster, so every portfolio-wide procedure waits on the answer. Flagged on all three property notes.
 - **Company history at the View.** A 2013 recapitalization page describes a "Dwell Apartment Portfolio" including a 216-unit Dwell at the View plus two properties that no longer exist in the portfolio, under a sponsor identified only as an Arizona firm. Same building, possibly a predecessor owner. Worth asking about.

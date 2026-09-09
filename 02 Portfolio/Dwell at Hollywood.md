@@ -16,6 +16,9 @@ occupancy_as_of:
 
 Operating and renovated. Part of the Hollywood Road cluster.
 
+> [!decide] Dependency: cluster or single asset
+> Unknown whether the three Hollywood Road properties are one operating unit or three. Until that is answered, "a property" is ambiguous here, and every portfolio-wide procedure is blocked. Ask Hessel.
+
 ## Who's accountable
 
 | Role | Person |
@@ -26,7 +29,7 @@ Operating and renovated. Part of the Hollywood Road cluster.
 
 ## Reported facts, not yet confirmed
 
-Pulled from public sources on 2026-09-08, before Graham had access to a rent roll. Nothing here is authoritative. Confirm each line against the system of record, then move the number into the properties panel above and delete it from this section.
+Unconfirmed. Confirm each line against the system of record, then move the number into the properties panel above and delete it from this section.
 
 - Units: 64.
 - Year built: 1965. The oldest building Dwell owns, which likely makes it the highest-maintenance one.
@@ -34,7 +37,7 @@ Pulled from public sources on 2026-09-08, before Graham had access to a rent rol
 
 ## Systems of record
 
-Not yet determined. Choosing and migrating to one is the first project, so for now the authoritative source for anything on this page is whoever answers the question out loud.
+Not yet determined. Choosing and migrating to one is the first project. Until then the authoritative source is whoever answers the question out loud.
 
 ## Open work
 
@@ -51,4 +54,4 @@ hide toolbar
 
 ## Log
 
-- 2026-09-08 · Note created from public sources during the vault redesign. Facts unverified.
+- 2026-09-08 · Note created from public sources. Facts unverified.

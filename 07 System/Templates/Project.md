@@ -15,7 +15,7 @@ The observable conditions that would let you close this project.
 
 **In.** The work and results that directly serve the outcome.
 
-**Out.** Adjacent work this project will not absorb. This is the line that keeps a project from expanding invisibly.
+**Out.** Adjacent work this project will not absorb.
 
 ## Where it stands
 

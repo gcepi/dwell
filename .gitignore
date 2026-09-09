@@ -5,3 +5,7 @@
 .obsidian/plugins/
 .obsidian/themes/
 node_modules/
+
+# Supernote drop folder. The routed copy in 07 System/Inbox/Raw/ is the vault record.
+Supernote/EXPORT/*.pdf
+Supernote/EXPORT/*.PDF

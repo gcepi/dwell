@@ -2,7 +2,10 @@
 cssclasses:
   - dwell-home
 ---
-# Good morning, Graham
+# Good morning
+
+> [!info] Task blocks need the [Tasks plugin](obsidian://show-plugin?id=obsidian-tasks-plugin).
+> Installed and enabled 2026-09-08. If a `tasks` block below renders as a plain code block, the plugin is off. Steps: [[01 Home/SETUP|SETUP]].
 
 > [!today] Start here
 > → [Open today's note](obsidian://daily?vault=dwell)
@@ -24,12 +27,12 @@ cssclasses:
 
 ## Waiting on you
 
-Nothing here moves without a decision only Graham can make. This is the shortest section that matters most, and an empty one is the goal.
+Every item here needs a decision.
 
 > [!decide] Procedure drafts to rule on
 > ![[07 System/Bases/Dashboard.base#Procedure Drafts]]
 >
-> A draft sits here until you set `status: active`, which turns it into the company's answer. Reading one and deciding it's wrong is as much of a result as approving it.
+> A draft sits here until you set `status: active`.
 
 > [!decide] Flagged for you
 > ![[07 System/Bases/Dashboard.base#Needs Review]]
@@ -43,7 +46,7 @@ Nothing here moves without a decision only Graham can make. This is the shortest
 >
 > [[02 Portfolio/_Portfolio|Open the portfolio →]]
 
-Units and occupancy are blank on purpose. The counts on the property notes came off public listing sites and one of them disagrees with itself by a factor of 2, so none of them belong in a column you'd read out loud to an owner. Fill each one in from the rent roll and the table becomes the thing you check first every morning.
+Units and occupancy are blank. Fill each one in from the rent roll.
 
 ## Projects
 
@@ -76,7 +79,7 @@ Units and occupancy are blank on purpose. The counts on the property notes came 
 
 ## What you're learning
 
-The 90-day deliverable nobody assigned you. Most of how this business works has never been written down, and the window where it's natural to ask closes fast.
+Field notes become procedure drafts. Write down what you were told today.
 
 > [!learn] Recent field notes
 > ![[07 System/Bases/Dashboard.base#Recent Field Notes]]
@@ -89,4 +92,4 @@ The 90-day deliverable nobody assigned you. Most of how this business works has 
 > [!system] Last run
 > ![[07 System/Bases/Dashboard.base#Latest Run Log]]
 
-[[01 Home/Review|Weekly review]] · [[01 Home/Tasks|Task ledger]] · [[07 System/Agent/NOW|Now, work]] · [[07 System/Agent/OPERATING-GUIDE|Operating guide]] · [[07 System/Agent/SYSTEM-REQUESTS|System requests]] · [[07 System/Inbox/Raw/|Raw inbox]]
+[[01 Home/README|README]] · [[01 Home/SETUP|Setup]] · [[01 Home/Review|Weekly review]] · [[01 Home/Tasks|Task ledger]] · [[07 System/Agent/NOW|Now, work]] · [[07 System/Agent/OPERATING-GUIDE|Operating guide]] · [[07 System/Agent/SYSTEM-REQUESTS|System requests]] · [[07 System/Inbox/Raw/|Raw inbox]]

@@ -1,6 +1,6 @@
 # Supernote automation
 
-Graham writes by hand on a Supernote and the device syncs exports to Google Drive. Two vaults now read from Drive, so something has to decide which vault gets a given page. That something is the filename.
+A Supernote syncs handwritten exports to Google Drive. Two vaults read from Drive. The filename decides which vault gets a given page.
 
 The rule is a prefix you type once when you name the note on the device.
 
@@ -13,12 +13,6 @@ The rule is a prefix you type once when you name the note on the device.
 `DWELL_` works the same as `WORK_`, and `GOS_` the same as `PERSONAL_`, so muscle memory either way is fine. Matching ignores case, so `work_` is also fine. The `_` character is required; `WORK notes` does not match.
 
 The same rule covers Apple Shortcut captures and anything else that lands in the watched folder.
-
-## Why a filename and not something smarter
-
-Content classification would work most of the time, and "most of the time" is the problem. A misrouted page is a confidentiality event in one direction and a privacy leak in the other: a rent roll landing in gOS is one website mirror away from public, and a personal journal page landing in DWELL sits on employer-adjacent infrastructure. A prefix is a decision Graham makes in the second he names the file, and it is auditable afterward from the filename alone.
-
-Unprefixed files are the honest failure mode. They stop, they get reported, nothing moves. Renaming one takes 4 seconds on the phone and it flows on the next pass.
 
 ## How it works
 
@@ -33,15 +27,15 @@ A Google Apps Script, `07 System/Agent/route-supernote.gs`, runs every 15 minute
 
 Moving the file out of the source folder is the only state the script keeps. There is no ledger and no cursor, so re-running it is always safe.
 
-The prefix stays on the filename after routing. The nightly sweep strips it when naming any note derived from the capture, per the operating guide's **Supernote and capture routing** section. Keeping it on the file means the routing decision is still visible in the Drive folder and in the sweep's already-processed ledger.
+The prefix stays on the filename after routing. The nightly sweep strips it when naming any note derived from the capture, per the operating guide's **Supernote and capture routing** section.
 
 ## Setup
 
-Four steps, all in Graham's Google account. About 15 minutes.
+Four steps, all in the Google account. About 15 minutes.
 
 ### 1. Create three Drive folders
 
-Two of the four folders already exist or need making:
+Four folders in total. The first three need making; the fourth already exists.
 
 - **Source folder.** Wherever the Supernote app already syncs. If it currently syncs straight into the gOS "Claude Inbox," that has to change: the source folder must be separate from both inboxes, or files loop forever. Make a folder called `Supernote Sync` and point the device at it.
 - **DWELL Inbox.** New. This is the only Drive folder the DWELL sweep reads.
@@ -89,7 +83,7 @@ The prefix table lives in `CONFIG.RULES` in the script. Adding a route means add
 
 Rules are evaluated top to bottom, so a longer prefix that overlaps a shorter one goes above it.
 
-A change here is a routing change and belongs to the weekly system review in both vaults, because both nightly contracts describe this table. Update the script, this document, and the **Supernote and capture routing** section of `OPERATING-GUIDE.md` in the same session.
+A change here is a routing change and belongs to the weekly system review in both vaults. Update the script, this document, and the **Supernote and capture routing** section of `OPERATING-GUIDE.md` in the same session.
 
 ## When something goes wrong
 
@@ -99,6 +93,6 @@ A change here is a routing change and belongs to the weekly system review in bot
 
 **Nothing is moving.** Check `Triggers` for the trigger, then `Executions` for a failure. The usual cause is a folder ID that changed because a folder was recreated rather than renamed.
 
-**Two files with the same name.** Both survive; the second gets a timestamp suffix. This is deliberate, since the gOS sweep keys its already-processed ledger on the exact filename and a silent duplicate would look like a file it had already handled.
+**Two files with the same name.** Both survive; the second gets a timestamp suffix.
 
 **The alert email is noisy.** Set `ALERT_EMAIL` to `null` and rely on the routing log instead.

@@ -1,10 +1,8 @@
 # System requests
 
-THIS IS THE PRODUCT ROADMAP!
+Dated intake log for changes to DWELL itself, bugs and feature requests together.
 
-The dated intake log for changes Graham wants made to DWELL itself, bugs and feature requests together. It exists so system tinkering stays inside one weekly review instead of interrupting the week.
-
-Graham reviews in a dedicated time block and points an agent at it. The routine the agent follows is the weekly system review in [[07 System/Agent/OPERATING-GUIDE|the operating guide]].
+The routine is the weekly system review in [[07 System/Agent/OPERATING-GUIDE|the operating guide]].
 
 gOS has its own separate log. A change that should apply to both vaults gets reviewed once and applied twice, in two commits in two repositories. Do not assume a gOS change landed here.
 
@@ -76,9 +74,6 @@ Keep the **Request** line in Graham's words. Anything the agent concludes belong
 - **Request:** "What does the business call the phases of a property?" Graham's answer in `NOW.md`: "Unknown. That's fine for now."
 - **Context:** Research on 2026-09-08 read dwellcommunities.com, both separately branded property sites, and Dwell's LinkedIn. None of them publish any lifecycle language. The company frames itself around four community pillars and a "Build. Belong. Innovate." tagline, never around a deal lifecycle. The only phase language anywhere is construction phasing at Dwell at 750, from a local news article. So `prospect` · `acquiring` · `renovating` · `stabilizing` · `operating` · `disposed` are the maintainer's invention with no external support. They stayed unchanged, because swapping one guess for another is not progress. Ask Hessel, then correct them in one pass across the operating guide, `Property.md`, and the 6 existing notes.
 - **Outcome:**
-
-
-DWELL was built in one autonomous session on 2026-09-08 while Graham was away. Everything below is a decision the agent made on his behalf that he should look at, or a step that needs him.
 
 ### The gOS voice validator lets a dated em dash through
 

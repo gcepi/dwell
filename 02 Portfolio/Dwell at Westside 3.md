@@ -14,7 +14,10 @@ occupancy_as_of:
 
 ## Where it stands
 
-Operating and renovated. The three Hollywood Road properties share one leasing email, `westside@dwellcommunities.com`, which suggests they are run as one cluster. Worth confirming whether they share staff, budget, and reporting.
+Operating and renovated. The three Hollywood Road properties share one leasing email, `westside@dwellcommunities.com`.
+
+> [!decide] Dependency: cluster or single asset
+> Unknown whether the three Hollywood Road properties are one operating unit or three. The shared leasing email suggests one cluster, but staff, budget, and reporting are unconfirmed. Until that is answered, "a property" is ambiguous here, and every portfolio-wide procedure is blocked. Ask Hessel.
 
 ## Who's accountable
 
@@ -26,7 +29,7 @@ Operating and renovated. The three Hollywood Road properties share one leasing e
 
 ## Reported facts, not yet confirmed
 
-Pulled from public sources on 2026-09-08, before Graham had access to a rent roll. Nothing here is authoritative. Confirm each line against the system of record, then move the number into the properties panel above and delete it from this section.
+Unconfirmed. Confirm each line against the system of record, then move the number into the properties panel above and delete it from this section.
 
 - Units: **40 or 80.** Two aggregators disagree, and the gap is a factor of 2. This is the first number to settle.
 - Year built: 1970 or 1975. Also in conflict.
@@ -34,7 +37,7 @@ Pulled from public sources on 2026-09-08, before Graham had access to a rent rol
 
 ## Systems of record
 
-Not yet determined. Choosing and migrating to one is the first project, so for now the authoritative source for anything on this page is whoever answers the question out loud.
+Not yet determined. Choosing and migrating to one is the first project. Until then the authoritative source is whoever answers the question out loud.
 
 ## Open work
 
@@ -51,4 +54,4 @@ hide toolbar
 
 ## Log
 
-- 2026-09-08 · Note created from public sources during the vault redesign. Facts unverified.
+- 2026-09-08 · Note created from public sources. Facts unverified.

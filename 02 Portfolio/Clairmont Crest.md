@@ -14,19 +14,19 @@ occupancy_as_of:
 
 ## Where it stands
 
-Operating, with renovations advertised as ongoing. Age restriction changes the operating model: different fair-housing exposure, different leasing cycle, different resident communication. Treat any portfolio-wide procedure as needing a Clairmont exception until proven otherwise.
+Operating, with renovations advertised as ongoing. Age restriction changes fair-housing exposure, leasing cycle, and resident communication. Treat any portfolio-wide procedure as needing a Clairmont exception until proven otherwise.
 
 ## Who's accountable
 
-| Role | Person |
-|---|---|
-| Property manager | |
-| Regional | |
-| Maintenance lead | |
+| Role             | Person |
+| ---------------- | ------ |
+| Property manager |        |
+| Regional         |        |
+| Maintenance lead |        |
 
 ## Reported facts, not yet confirmed
 
-Pulled from public sources on 2026-09-08, before Graham had access to a rent roll. Nothing here is authoritative. Confirm each line against the system of record, then move the number into the properties panel above and delete it from this section.
+Unconfirmed. Confirm each line against the system of record, then move the number into the properties panel above and delete it from this section.
 
 - Units: 213.
 - Year built: 1986.
@@ -35,7 +35,7 @@ Pulled from public sources on 2026-09-08, before Graham had access to a rent rol
 
 ## Systems of record
 
-Not yet determined. Choosing and migrating to one is the first project, so for now the authoritative source for anything on this page is whoever answers the question out loud.
+Not yet determined. Choosing and migrating to one is the first project. Until then the authoritative source is whoever answers the question out loud.
 
 ## Open work
 
@@ -52,4 +52,4 @@ hide toolbar
 
 ## Log
 
-- 2026-09-08 · Note created from public sources during the vault redesign. Facts unverified.
+- 2026-09-08 · Note created from public sources. Facts unverified.

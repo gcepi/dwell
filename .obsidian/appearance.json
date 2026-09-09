@@ -3,5 +3,6 @@
   "enabledCssSnippets": [
     "dwell-home"
   ],
-  "accentColor": "#42756C"
+  "accentColor": "#03ecfc",
+  "theme": "moonstone"
 }

@@ -1,6 +1,6 @@
 ## Learned today
 
-How something actually works, or the answer to a question you didn't know to ask yesterday. One bullet is enough. This is the 90-day deliverable, so it goes first.
+How something actually works, or the answer to a question you didn't know to ask yesterday. One bullet is enough.
 
 ## Who I talked to
 

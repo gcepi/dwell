@@ -48,13 +48,11 @@ hide toolbar
 - {{date}} · Property note created.
 
 <!--
-The numbers live in the properties panel, not in the body. That is what makes
-the portfolio table on the dashboard work, and it means a number exists in
-exactly one place.
+The numbers live in the properties panel, not in the body.
 
 units: integer. occupancy: percent as an integer, 0-100.
-occupancy_as_of: the ISO date of the report the number came from. A percent
-without its date is a rumor, so both fields move together or neither moves.
+occupancy_as_of: the ISO date of the report the number came from. Both fields
+move together or neither moves.
 
 Statuses: prospect | acquiring | renovating | stabilizing | operating | disposed.
 Only Graham changes status. Only Graham creates this note.
