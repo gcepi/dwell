@@ -89,7 +89,7 @@ views:
     name: Needs Review
     filters:
       and:
-        - file.folder == "07 System/Inbox/Needs Review"
+        - file.folder == "03 System/Inbox/Needs Review"
         - type == "capture"
         - status == "needs-review"
     order:
@@ -173,7 +173,7 @@ views:
     name: Latest Run Log
     filters:
       and:
-        - file.folder == "07 System/Logs"
+        - file.folder == "03 System/Logs"
         - type == "automation-log"
     order:
       - file.name

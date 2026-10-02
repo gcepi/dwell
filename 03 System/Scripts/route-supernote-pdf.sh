@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# Routes PDFs from Supernote/EXPORT/ into 07 System/Inbox/Raw/.
+# Routes PDFs from Supernote/EXPORT/ into 03 System/Inbox/Raw/.
 #
 # File type is the signal. Every PDF in EXPORT/ is copied to Raw with a
 # metadata sidecar. No filename convention.
@@ -8,14 +8,14 @@
 # repeat runs from copying the same file twice, and re-copies a file that
 # changed. Nothing is overwritten and nothing is deleted.
 #
-# Usage: bash "07 System/Scripts/route-supernote-pdf.sh" [--quiet]
+# Usage: bash "03 System/Scripts/route-supernote-pdf.sh" [--quiet]
 
 set -uo pipefail
 
 VAULT="$(cd "$(dirname "${BASH_SOURCE[0]}")/../.." && pwd)"
 SRC="$VAULT/Supernote/EXPORT"
-DEST="$VAULT/07 System/Inbox/Raw"
-LEDGER="$VAULT/07 System/Agent/processed-pdfs.txt"
+DEST="$VAULT/03 System/Inbox/Raw"
+LEDGER="$VAULT/03 System/Agent/processed-pdfs.txt"
 
 QUIET=0
 [ "${1:-}" = "--quiet" ] && QUIET=1

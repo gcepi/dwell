@@ -7,17 +7,17 @@ cssclasses:
 Six properties, all metro Atlanta. Every one is a 1965 to 1986 building that Dwell bought and renovated.
 
 > [!portfolio] Everything
-> ![[07 System/Bases/Portfolio.base#All Properties]]
+> ![[03 System/Bases/Portfolio.base#All Properties]]
 
 ## Occupancy
 
 Blank until it comes off a rent roll.
 
 > [!portfolio] Operating properties
-> ![[07 System/Bases/Portfolio.base#Occupancy]]
+> ![[03 System/Bases/Portfolio.base#Occupancy]]
 
 > [!decide] Still missing a unit count
-> ![[07 System/Bases/Portfolio.base#Missing Numbers]]
+> ![[03 System/Bases/Portfolio.base#Missing Numbers]]
 
 ## How the portfolio is shaped
 

@@ -37,7 +37,7 @@ origin: ai
 ## Input details
 
 - DWELL Google Drive inbox: <inventory and Chicago selection window>
-- `07 System/Inbox/Raw/`: <manual captures and exact run-date Daily Note>
+- `03 System/Inbox/Raw/`: <manual captures and exact run-date Daily Note>
 - Google Calendar: <seven-day window and event count>
 
 ## Output details

@@ -89,6 +89,6 @@ hide toolbar
 
 ## System
 
-- [[07 System/Agent/SYSTEM-REQUESTS|System requests]], newest week first. The review's agenda.
-- [[07 System/Inbox/Needs Review/|Needs Review]], anything still open from the nightly sweeps.
-- [[07 System/Inbox/Failed/|Failed]], which should normally be empty.
+- [[03 System/Agent/SYSTEM-REQUESTS|System requests]], newest week first. The review's agenda.
+- [[03 System/Inbox/Needs Review/|Needs Review]], anything still open from the nightly sweeps.
+- [[03 System/Inbox/Failed/|Failed]], which should normally be empty.

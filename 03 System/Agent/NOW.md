@@ -13,7 +13,7 @@ Current context for the role. Update every 90 days, or whenever the phase change
 
 Dwell Communities. A real estate development group that buys undervalued apartment complexes, restores them, and operates them. Founded 2012, headquartered at 750 Franklin Gateway SE in Marietta, Georgia, which is also one of its properties. 11 to 50 employees. The stated path is to grow into President of the property management company.
 
-The first phase is learning the operations. That means the leasing funnel, application and verification, move-in and move-out, customer care, maintenance and vendor management, invoicing and payroll. A flowchart of the leasing and customer-care lifecycle is filed at `07 System/Attachments/leasing-lifecycle-flowchart.png`.
+The first phase is learning the operations. That means the leasing funnel, application and verification, move-in and move-out, customer care, maintenance and vendor management, invoicing and payroll. A flowchart of the leasing and customer-care lifecycle is filed at `03 System/Attachments/leasing-lifecycle-flowchart.png`.
 
 Prior background is 5 years in mission-driven startups: consulting service delivery, revenue operations, digital marketing. Strong on systems, process, and communication. New to real estate and to property management specifically.
 

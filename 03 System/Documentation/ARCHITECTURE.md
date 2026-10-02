@@ -5,7 +5,7 @@ Three layers, one job each.
 ```text
 01 Home/     use it
 02 Notes/    keep the work
-07 System/   explain and operate it
+03 System/   explain and operate it
 ```
 
 `Supernote/EXPORT/` is an intake folder. It is not where knowledge lives.
@@ -20,7 +20,7 @@ Every substantive work note lives in `02 Notes/`, regardless of whether it is a 
 
 ## System
 
-`07 System/` contains the things that make the vault predictable: templates, scripts, inboxes, retained sources, logs, Bases, and these documents. It is readable documentation, not a second work area.
+`03 System/` contains the things that make the vault predictable: templates, scripts, inboxes, retained sources, logs, Bases, and these documents. It is readable documentation, not a second work area.
 
 ## Boundaries
 
@@ -31,4 +31,4 @@ Every substantive work note lives in `02 Notes/`, regardless of whether it is a 
 
 ## Current dependencies
 
-Grain intake, Drive routing, scheduled nightly processing, and screen control are not assumed live merely because their files exist. Their current state and dates are in [[07 System/Documentation/ROADMAP|Roadmap]].
+Grain intake, Drive routing, scheduled nightly processing, and screen control are not assumed live merely because their files exist. Their current state and dates are in [[03 System/Documentation/ROADMAP|Roadmap]].

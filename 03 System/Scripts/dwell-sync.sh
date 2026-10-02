@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 # End-of-day sync for the DWELL vault. Run from anywhere:
 #
-#   bash "07 System/Scripts/dwell-sync.sh"
+#   bash "03 System/Scripts/dwell-sync.sh"
 #
 # Four steps, then a summary:
-#   1. Route Supernote PDFs from Supernote/EXPORT/ into 07 System/Inbox/Raw/
+#   1. Route Supernote PDFs from Supernote/EXPORT/ into 03 System/Inbox/Raw/
 #   2. Inventory the inbox: what is waiting, what is flagged, what failed
 #   3. Validate tasks, Notes, and prose against the voice rules
 #   4. Commit and push
@@ -34,8 +34,8 @@ for arg in "$@"; do
   esac
 done
 
-AGENT="07 System/Agent"
-INBOX="07 System/Inbox"
+AGENT="03 System/Agent"
+INBOX="03 System/Inbox"
 
 # Prose the validators should read. The Agent, Documentation, and Templates
 # folders are excluded: they quote the banned words to define the rules about
@@ -43,8 +43,8 @@ INBOX="07 System/Inbox"
 VOICE_DIRS=(
   "01 Home"
   "02 Notes"
-  "07 System/Logs"
-  "07 System/Sources"
+  "03 System/Logs"
+  "03 System/Sources"
 )
 
 FLAGS=()
@@ -62,7 +62,7 @@ pdf_held=0
 pdf_failed=0
 PDF_NAMES=()
 
-if [ -x "07 System/Scripts/route-supernote-pdf.sh" ] || [ -f "07 System/Scripts/route-supernote-pdf.sh" ]; then
+if [ -x "03 System/Scripts/route-supernote-pdf.sh" ] || [ -f "03 System/Scripts/route-supernote-pdf.sh" ]; then
   while IFS= read -r line; do
     case "$line" in
       PDF_RESULT*)
@@ -76,7 +76,7 @@ if [ -x "07 System/Scripts/route-supernote-pdf.sh" ] || [ -f "07 System/Scripts/
         ;;
       PDF_FILE*) PDF_NAMES+=("${line#PDF_FILE }") ;;
     esac
-  done < <(bash "07 System/Scripts/route-supernote-pdf.sh" --quiet 2>/dev/null)
+  done < <(bash "03 System/Scripts/route-supernote-pdf.sh" --quiet 2>/dev/null)
 else
   note_flag "route-supernote-pdf.sh is missing; no PDFs were routed."
 fi
@@ -224,7 +224,7 @@ fi
 
 if [ "$raw_waiting" -gt 0 ]; then
   printf '\n%s capture(s) in Inbox/Raw are filed but not yet classified.\n' "$raw_waiting"
-  printf 'The nightly agent reads them, or ask an agent to follow 07 System/Agent/NIGHTLY-SWEEP.md now.\n'
+  printf 'The nightly agent reads them, or ask an agent to follow 03 System/Agent/NIGHTLY-SWEEP.md now.\n'
 fi
 
 [ "${#ERRORS[@]}" -gt 0 ] && exit 1

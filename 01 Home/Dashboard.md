@@ -31,19 +31,19 @@ cssclasses:
 Every item here needs a decision.
 
 > [!decide] Procedure drafts to rule on
-> ![[07 System/Bases/Dashboard.base#Procedure Drafts]]
+> ![[03 System/Bases/Dashboard.base#Procedure Drafts]]
 >
 > A draft sits here until you set `status: active`.
 
 > [!decide] Flagged for you
-> ![[07 System/Bases/Dashboard.base#Needs Review]]
+> ![[03 System/Bases/Dashboard.base#Needs Review]]
 >
-> ![[07 System/Bases/Dashboard.base#Unreviewed AI Results]]
+> ![[03 System/Bases/Dashboard.base#Unreviewed AI Results]]
 
 ## Portfolio
 
 > [!portfolio] Six properties, all metro Atlanta
-> ![[07 System/Bases/Dashboard.base#Portfolio]]
+> ![[03 System/Bases/Dashboard.base#Portfolio]]
 >
 > [[02 Notes/_Portfolio|Open the portfolio →]]
 
@@ -52,14 +52,14 @@ Units and occupancy are blank. Fill each one in from the rent roll.
 ## Projects
 
 > [!work] Active
-> ![[07 System/Bases/Dashboard.base#Active Projects]]
+> ![[03 System/Bases/Dashboard.base#Active Projects]]
 >
 > [[02 Notes/|All work notes →]]
 
 ## This week
 
 > [!ahead] Meetings
-> ![[07 System/Bases/Dashboard.base#Upcoming Meetings]]
+> ![[03 System/Bases/Dashboard.base#Upcoming Meetings]]
 >
 > ```tasks
 > path includes 01 Home/Tasks.md
@@ -74,7 +74,7 @@ Units and occupancy are blank. Fill each one in from the rent roll.
 > ```
 
 > [!people] People needing attention
-> ![[07 System/Bases/Dashboard.base#People Needing Attention]]
+> ![[03 System/Bases/Dashboard.base#People Needing Attention]]
 >
 > [[02 Notes/_People|Everyone →]] · [[02 Notes/Names to remember|Names to remember]]
 
@@ -83,14 +83,14 @@ Units and occupancy are blank. Fill each one in from the rent roll.
 Field notes become procedure drafts. Write down what you were told today.
 
 > [!learn] Recent field notes
-> ![[07 System/Bases/Dashboard.base#Recent Field Notes]]
+> ![[03 System/Bases/Dashboard.base#Recent Field Notes]]
 
 > [!book] What's been ratified
-> ![[07 System/Bases/Dashboard.base#Active Procedures]]
+> ![[03 System/Bases/Dashboard.base#Active Procedures]]
 
 ## System
 
 > [!system] Last run
-> ![[07 System/Bases/Dashboard.base#Latest Run Log]]
+> ![[03 System/Bases/Dashboard.base#Latest Run Log]]
 
 [[01 Home/Hessel|Hessel]] · [[01 Home/Tasks|Tasks]] · [[01 Home/Notes|Notes]] · [[01 Home/Review|Review]] · [[01 Home/System|System]]

@@ -4,12 +4,12 @@
 
 Triage the trusted inputs, act according to the instructions or implications, and report it in the morning brief email.
 
-This is the DWELL procedure. The gOS sweep is a separate contract in a separate repository, run by a separate operator. Read `07 System/Documentation/NIGHTLY-OPERATORS.md` if you are unsure which one you are.
+This is the DWELL procedure. The gOS sweep is a separate contract in a separate repository, run by a separate operator. Read `03 System/Documentation/NIGHTLY-OPERATORS.md` if you are unsure which one you are.
 
 # Trusted inputs
 
 1. The DWELL Google Drive inbox: Supernote exports, Apple Shortcut captures, annotated PDFs, screenshots. Files reach it only through the prefix router, so everything there has already been marked as work. Select by the rule in **Drive inbox selection** below.
-2. `07 System/Inbox/Raw/` for manual Obsidian captures and date-named Daily Notes.
+2. `03 System/Inbox/Raw/` for manual Obsidian captures and date-named Daily Notes.
 3. Google Calendar events beginning in the coming seven days, for the morning Meetings brief.
 
 Three inputs. There is no Readwise channel here and no website mirror. Both belong to gOS.
@@ -41,13 +41,13 @@ If Drive, Gmail, Calendar, GitHub, validation, or another required capability is
 
 The inbox is the DWELL Drive folder created during Supernote setup. Its folder ID is the stable handle; the title is not. Record the ID in this section once Graham creates the folder.
 
-> **DWELL Drive inbox folder ID:** not yet created. See `07 System/Documentation/SUPERNOTE-AUTOMATION.md`. Until it exists, report the Drive channel as `not configured` and set the run to `notice`.
+> **DWELL Drive inbox folder ID:** not yet created. See `03 System/Documentation/SUPERNOTE-AUTOMATION.md`. Until it exists, report the Drive channel as `not configured` and set the run to `notice`.
 
 1. Enumerate the folder's direct children by `parentId` with no date clause, then filter `createdTime` for the run date in Chicago on the returned list.
 2. Do not select captures with a whole-Drive `createdTime` query, and do not resolve the folder by title. A zero result from either of those methods is not evidence of an empty channel.
 3. If the `parentId` enumeration itself errors, the Drive input is `failed` for that run. Never downgrade a connector error to "no captures".
-4. For every direct child older than the run date, check `07 System/Agent/processed-captures.md` first. If its exact filename is listed there, report `already processed` and move on. If it is not listed, search Resources, Tasks, SOPs, Needs Review, and `01 Home/Notes.md` for the filename; if a provenance-linked outcome exists, report `already processed` and append the filename to `processed-captures.md`. If nothing links to it, process it in the current run as catch-up, label it as such in the ledger, and append its filename to `processed-captures.md`.
-5. After processing any Drive capture in this run, append its exact filename to `07 System/Agent/processed-captures.md` in the same commit. Never remove a line from that file.
+4. For every direct child older than the run date, check `03 System/Agent/processed-captures.md` first. If its exact filename is listed there, report `already processed` and move on. If it is not listed, search Resources, Tasks, SOPs, Needs Review, and `01 Home/Notes.md` for the filename; if a provenance-linked outcome exists, report `already processed` and append the filename to `processed-captures.md`. If nothing links to it, process it in the current run as catch-up, label it as such in the ledger, and append its filename to `processed-captures.md`.
+5. After processing any Drive capture in this run, append its exact filename to `03 System/Agent/processed-captures.md` in the same commit. Never remove a line from that file.
 6. Do not descend into subfolders.
 7. Never enumerate the gOS Drive inbox, even to check whether something was misfiled. If a file in your own inbox is obviously personal, leave it, process nothing from it, and create a Needs Review item saying it looks misrouted.
 
@@ -55,19 +55,19 @@ Run the enumeration every night even when the date filter is expected to be empt
 
 ## Sequence
 
-1. Read the **Every run** section of `07 System/Agent/OPERATING-GUIDE.md` and all of `07 System/Agent/AGENT-VOICE.md`. This file is the rest of the run contract; open other sections of the guide when a step needs them.
+1. Read the **Every run** section of `03 System/Agent/OPERATING-GUIDE.md` and all of `03 System/Agent/AGENT-VOICE.md`. This file is the rest of the run contract; open other sections of the guide when a step needs them.
 2. Inventory all three inputs even when a channel is empty.
 3. Select Drive captures by **Drive inbox selection** above. For those captures, correct an obvious typo, transcription error, or OCR error only when one reading is substantially more likely and the resulting action remains concrete. If the action, object, person, property, or number is genuinely ambiguous, preserve it in Needs Review rather than creating a garbled task.
-4. Screen every capture for resident and applicant financial, medical, or identity detail before writing anything derived from it. Follow **Confidentiality** in the operating guide: write the operational fact without the personal detail, name the system of record, retain the original in `07 System/Sources/` only if it must be kept. If the operational fact cannot be stated without the personal detail, the item goes to Needs Review. Do this before step 5.
-5. For `07 System/Inbox/Raw/`, inspect every non-date-named direct child regardless of age, except the structural `.gitkeep`. A page that gives the sweep an instruction is executed here; a page that is filed reference, not an instruction and not a meeting record, is classified and moved to `02 Notes/` as a Garden note (see **Filing to the Garden**). Processed Markdown captures then move to Archive; retained PDFs, images, and other source originals move to Sources. For Daily Notes, read only `YYYY-MM-DD.md` matching the run date or an explicitly requested catch-up range, then move any Daily Note whose date is before the run date to `07 System/Inbox/Archive/`.
+4. Screen every capture for resident and applicant financial, medical, or identity detail before writing anything derived from it. Follow **Confidentiality** in the operating guide: write the operational fact without the personal detail, name the system of record, retain the original in `03 System/Sources/` only if it must be kept. If the operational fact cannot be stated without the personal detail, the item goes to Needs Review. Do this before step 5.
+5. For `03 System/Inbox/Raw/`, inspect every non-date-named direct child regardless of age, except the structural `.gitkeep`. A page that gives the sweep an instruction is executed here; a page that is filed reference, not an instruction and not a meeting record, is classified and moved to `02 Notes/` as a Garden note (see **Filing to the Garden**). Processed Markdown captures then move to Archive; retained PDFs, images, and other source originals move to Sources. For Daily Notes, read only `YYYY-MM-DD.md` matching the run date or an explicitly requested catch-up range, then move any Daily Note whose date is before the run date to `03 System/Inbox/Archive/`.
 6. Add today's date heading to `01 Home/Notes.md` every run, even when nothing routes there. Write it as `# Month Day, Year` (for example `# September 9, 2026`) at the very top of the file, above the previous newest day, with one blank line after it. If the run-date heading is already present because Graham wrote earlier that day, leave it and its content in place.
 7. Read Google Calendar events whose start falls from the run time through the next seven days. Sort ascending by start. Preserve day/date, the event's displayed time, and title only in the digest; do not copy descriptions, attendees, locations, or meeting links into any digest text. If Calendar is not connected or the read fails, record the exact limitation, use `Calendar unavailable.` in Meetings, and set the run to at least `notice`.
-8. Inspect image files placed at the vault root. Move each to `07 System/Attachments/` and rewrite exact Markdown or wikilink embeds to the new path when the filename is unique. Never overwrite an existing attachment. A filename collision or ambiguous reference goes to Needs Review. This is attachment housekeeping, not permission to interpret the image.
+8. Inspect image files placed at the vault root. Move each to `03 System/Attachments/` and rewrite exact Markdown or wikilink embeds to the new path when the filename is unique. Never overwrite an existing attachment. A filename collision or ambiguous reference goes to Needs Review. This is attachment housekeeping, not permission to interpret the image.
 9. Deduplicate Drive captures by stable source identity and Daily Note outcomes by the Daily Note wikilink plus the exact source passage.
-10. Route only to approved destinations. If no direct mapping can be inferred, preserve the item and create a `capture` with `status: needs-review` in `07 System/Inbox/Needs Review/`.
-11. After properly routing a non-date-named manual Markdown capture, move that original to `07 System/Inbox/Archive/` with a processing note at the top. Move a retained non-Markdown source original to `07 System/Sources/`. A date-named Daily Note moves to Archive once its date has passed and the sweep has read it; the current run-date note stays in `Raw/` until the next run so Obsidian can reopen it by date.
-12. Write the run log to `07 System/Logs/` with deterministic `success`, `notice`, or `failed` status, following **Reporting contract** below.
-13. Run `node "07 System/Agent/validate-notes.mjs"`, `node "07 System/Agent/validate-tasks.mjs"`, and `node "07 System/Agent/validate-voice.mjs" "<log path>"`. Correct every validation error before committing; a voice failure means rewriting the offending line, not suppressing the check.
+10. Route only to approved destinations. If no direct mapping can be inferred, preserve the item and create a `capture` with `status: needs-review` in `03 System/Inbox/Needs Review/`.
+11. After properly routing a non-date-named manual Markdown capture, move that original to `03 System/Inbox/Archive/` with a processing note at the top. Move a retained non-Markdown source original to `03 System/Sources/`. A date-named Daily Note moves to Archive once its date has passed and the sweep has read it; the current run-date note stays in `Raw/` until the next run so Obsidian can reopen it by date.
+12. Write the run log to `03 System/Logs/` with deterministic `success`, `notice`, or `failed` status, following **Reporting contract** below.
+13. Run `node "03 System/Agent/validate-notes.mjs"`, `node "03 System/Agent/validate-tasks.mjs"`, and `node "03 System/Agent/validate-voice.mjs" "<log path>"`. Correct every validation error before committing; a voice failure means rewriting the offending line, not suppressing the check.
 14. Open and merge the pull request per **GitHub pull-request transport**.
 15. After the merge, send the log's **Run digest** to `gcepica@gmail.com` as one `multipart/alternative` Gmail message. Subject: `DWELL brief · YYYY-MM-DD`. Every string the email adds on top of the Run digest passes `AGENT-VOICE.md`. Do not send Slack.
 
@@ -161,7 +161,7 @@ The three Input counters have fixed meanings:
 
 - **Quick notes**: informational Drive or Raw capture items that are not executable request units.
 - **Prompts**: explicit first-party request units selected for execution, whether completed, unchanged, sent to review, or failed.
-- **Documents**: leases, invoices, inspection reports, rent rolls, and other originals retained to `07 System/Sources/` this run.
+- **Documents**: leases, invoices, inspection reports, rent rolls, and other originals retained to `03 System/Sources/` this run.
 
 When a count is nonzero, its bullet continues after a middot ( · ) with the shortest recognizable names of the selected items. No em dash anywhere in the log; the digest separator is the middot and prose is full sentences. Link a name when there is a stable useful URL; otherwise use a quoted title or filename Graham can find with Command+O. Always name every Prompt. Quick notes and Documents may show the first five names followed by `+N more → Log`. Every Prompt name must begin one matching Output bullet, followed by ` → ` and the concrete result.
 
@@ -200,17 +200,17 @@ Before commit, verify that every ledger request appears in Output, Needs review,
 
 ## Manual Raw captures
 
-A non-date-named direct child under `07 System/Inbox/Raw/` is a manual capture or source original, except `.gitkeep`, which is structural. Inspect every capture every run regardless of filename, extension, or creation date until a provenance-linked outcome exists. Raw is intake only: after a run it holds `.gitkeep` and, until the next run, the current run-date Daily Note.
+A non-date-named direct child under `03 System/Inbox/Raw/` is a manual capture or source original, except `.gitkeep`, which is structural. Inspect every capture every run regardless of filename, extension, or creation date until a provenance-linked outcome exists. Raw is intake only: after a run it holds `.gitkeep` and, until the next run, the current run-date Daily Note.
 
 1. Execute an explicit first-party command under the normal command contract.
 2. Link every durable outcome back to the exact Raw capture through `source_notes`.
 3. Before executing, search Resources, Tasks, SOPs, Needs Review, and logs for the same capture wikilink and exact command passage.
 4. If the outcome already exists, report `already processed`; do not execute it again.
-5. Move a processed Markdown capture to Archive. Move a retained PDF, image, or other source original to `07 System/Sources/`. Preserve the original bytes.
+5. Move a processed Markdown capture to Archive. Move a retained PDF, image, or other source original to `03 System/Sources/`. Preserve the original bytes.
 
 ## Daily Notes
 
-An exact date-named file at `07 System/Inbox/Raw/YYYY-MM-DD.md` is an Obsidian Daily Note, and should simultaneously be treated as a potential `capture` record. It is exempt from managed YAML. The current run-date note stays in place so Obsidian can reopen it by date; once its date has passed and the sweep has read it, it moves to Archive.
+An exact date-named file at `03 System/Inbox/Raw/YYYY-MM-DD.md` is an Obsidian Daily Note, and should simultaneously be treated as a potential `capture` record. It is exempt from managed YAML. The current run-date note stays in place so Obsidian can reopen it by date; once its date has passed and the sweep has read it, it moves to Archive.
 
 Process a Daily Note as a mixed first-party capture:
 
@@ -249,7 +249,7 @@ Highlights live in the PDF annotation layer, not in its text. Extracting page te
 4. Treat two annotations with identical `/QuadPoints` on the same page as one highlight.
 5. A `/Stamp` annotation named `/Supernote_Bitmap` sets `origin: supernote`. Without a deterministic signal, leave the origin for review rather than guessing.
 6. Record provenance as the filename and page number. A PDF annotation has no stable URL; do not construct one.
-7. An annotated lease, invoice, or inspection report is a `source`. The annotations become Notes bullets or tasks; the document itself goes to `07 System/Sources/`, and **Confidentiality** governs what gets transcribed.
+7. An annotated lease, invoice, or inspection report is a `source`. The annotations become Notes bullets or tasks; the document itself goes to `03 System/Sources/`, and **Confidentiality** governs what gets transcribed.
 
 ## Filing to the Garden
 
@@ -293,9 +293,9 @@ A capture goes to the roster when it names a person and something that identifie
 - A person Graham wants to remember, with no CRM operation named → one line in `02 Notes/Names to remember.md`.
 - Explicit CRM command → match, create, or update one `type: contact` profile in `02 Notes/` by following the operating guide's Relationships section.
 - Brief one-off result → log and email digest only.
-- Blocked or ambiguous command → `07 System/Inbox/Needs Review/` and the log.
+- Blocked or ambiguous command → `03 System/Inbox/Needs Review/` and the log.
 - Anything that looks personal rather than work → left in place, reported, never moved to gOS.
-- Request to change DWELL itself → append an entry to `07 System/Agent/SYSTEM-REQUESTS.md` in its format, then stop. Architecture, schema, template, routing, and automation changes belong to the weekly system review.
+- Request to change DWELL itself → append an entry to `03 System/Agent/SYSTEM-REQUESTS.md` in its format, then stop. Architecture, schema, template, routing, and automation changes belong to the weekly system review.
 
 Do not create a prompt queue or save the command as a substitute for executing it. `SYSTEM-REQUESTS.md` is not that queue. When one capture asks for both an executable action and a system change, do the executable part tonight and file only the system change.
 

@@ -174,7 +174,7 @@ lines.forEach((raw, i) => {
 if (findings.length > 0) {
   console.error(`Voice validation failed (${findings.length}):`);
   for (const f of findings) console.error(`- line ${f.lineNo}: ${f.why}`);
-  console.error("\nRewrite the offending lines. See 07 System/Agent/AGENT-VOICE.md.");
+  console.error("\nRewrite the offending lines. See 03 System/Agent/AGENT-VOICE.md.");
   process.exit(1);
 }
 

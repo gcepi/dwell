@@ -2,12 +2,13 @@
 
 ## What exists now
 
+- **Current structure marker:** `01 Home/` · `02 Notes/` · `03 System/`. There should be no `07 System/` folder in this vault.
 - [[01 Home/Dashboard|Dashboard]]: today’s work, decisions, portfolio, and system output.
 - [[01 Home/Hessel|Hessel]]: working questions and loose ends for Hessel conversations.
 - [[01 Home/Tasks|Tasks]]: a temporary Dwell ledger. It is not Asana.
 - [[01 Home/Notes|Notes]]: running observations in your own words.
 - `02 Notes/`: every substantive work note, surfaced by its frontmatter type.
-- `07 System/`: templates, scripts, sources, logs, and documentation.
+- `03 System/`: templates, scripts, sources, logs, and documentation.
 
 ## What it does
 
@@ -29,4 +30,4 @@ It preserves source material, makes it findable, gives you action-oriented views
 
 ## Next
 
-[[07 System/Documentation/ROADMAP|Open the dated roadmap]] · [[07 System/Documentation/DAILY-HANDOFF|Daily handoff]] · [[07 System/Documentation/ARCHITECTURE|Architecture]] · [[01 Home/SETUP|Device setup]]
+[[03 System/Documentation/ROADMAP|Open the dated roadmap]] · [[03 System/Documentation/DAILY-HANDOFF|Daily handoff]] · [[03 System/Documentation/ARCHITECTURE|Architecture]] · [[01 Home/SETUP|Device setup]]

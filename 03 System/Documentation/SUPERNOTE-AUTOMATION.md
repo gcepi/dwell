@@ -16,7 +16,7 @@ The same rule covers Apple Shortcut captures and anything else that lands in the
 
 ## How it works
 
-A Google Apps Script, `07 System/Agent/route-supernote.gs`, runs every 15 minutes. Each pass:
+A Google Apps Script, `03 System/Agent/route-supernote.gs`, runs every 15 minutes. Each pass:
 
 1. Lists the files in the source folder. It never descends into subfolders.
 2. Skips any file modified in the last 90 seconds, so a half-finished sync never gets moved mid-write.
@@ -53,7 +53,7 @@ https://drive.google.com/drive/folders/1AbCdEfGhIjKlMnOpQrStUvWxYz
 
 1. Go to [script.google.com](https://script.google.com) and create a new project. Name it `Supernote routing`.
 2. Delete the contents of `Code.gs`.
-3. Paste in all of `07 System/Agent/route-supernote.gs`.
+3. Paste in all of `03 System/Agent/route-supernote.gs`.
 4. Fill in the four IDs in the `CONFIG` block at the top. `GOS_INBOX_ID` is already filled in.
 5. Save.
 

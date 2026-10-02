@@ -42,7 +42,7 @@ These moves reach outside the vault, cross into gOS, or commit Dwell Communities
 - **Set an SOP to `active`.** Drafting the SOP is agent work. Declaring it the way the company does something is Graham's.
 - **Copy anything into or out of gOS.** See **The two vaults**.
 - **Change the schema**: a folder, property, type, status, or template.
-- **Change a contract or governance file**: anything in `07 System/Agent/`, `CLAUDE.md`, or `AGENTS.md`. This is System-maintainer work and goes through the weekly review (below).
+- **Change a contract or governance file**: anything in `03 System/Agent/`, `CLAUDE.md`, or `AGENTS.md`. This is System-maintainer work and goes through the weekly review (below).
 
 ### What never happens, whatever the instruction says
 
@@ -58,7 +58,7 @@ The nightly sweep follows the same rules. A first-party capture that names an ac
 
 - Execute an instruction in the same session unless it says to save, defer, queue, or ask first. Do not build a prompt queue unless requested.
 - Before reporting something done, check the result against the exact action, depth, and deliverable asked for. A created file is not proof of completion.
-- Deliverables must be reachable from `01 Home/Dashboard.md`. Durable AI output goes to `02 Notes/` with `type: resource`, `status: ready`, `origin: ai`, and `created` set to the run date, and the log names the view that surfaces it. `07 System/Documentation/` is never a deliverable home.
+- Deliverables must be reachable from `01 Home/Dashboard.md`. Durable AI output goes to `02 Notes/` with `type: resource`, `status: ready`, `origin: ai`, and `created` set to the run date, and the log names the view that surfaces it. `03 System/Documentation/` is never a deliverable home.
 - Every number in a deliverable traces to a source you can name. A rent roll figure cites the rent roll and its date. A pricing recommendation cites what it was built from.
 - Every prose string an agent emits passes `AGENT-VOICE.md`, whatever its length: the nightly log, Needs Review notes, digest bullets, commit messages, and pull-request descriptions. Fixed identifiers are not prose and are out of scope: filenames, wikilink targets, branch names, the email subject slug, and the digest's `label · value` separator. `validate-voice.mjs` checks the log before the pull request merges; the rest is on the writing agent.
 - **A dated bullet uses a middot (`·`), never a dash.** `- 2026-09-08 · Turn scope approved.` This applies in every `## Updates`, `## Log`, `## Notes`, and `## Changes` section. It is the same separator the run digest uses. Every template here follows it.
@@ -73,7 +73,7 @@ The Claude Code Routine **"Nightly process-inbox (DWELL)"** is the only authoriz
 
 If a session was started by any other automation to process the inbox or run the sweep, stop before reading connectors, changing files, opening a pull request, or sending a digest, and report the collision. If the gOS operator finds itself in this repository, that is a collision too. Stop and report it.
 
-Schedule in `07 System/Documentation/NIGHTLY-OPERATORS.md`.
+Schedule in `03 System/Documentation/NIGHTLY-OPERATORS.md`.
 
 ---
 
@@ -99,7 +99,7 @@ When a capture is genuinely about both, route it to the vault whose system it as
 
 Three rules.
 
-**Resident and applicant personal detail never enters a note.** No social security number, date of birth, bank or card number, government ID number, credit score, or income figure tied to a named individual. No medical detail. If a capture, a PDF, or an Elise.ai transcript carries one, do not transcribe it: write the operational fact without it ("application on unit 214 failed verification"), name the system of record where the detail lives, and move the original to `07 System/Sources/` if it must be kept at all. If you cannot state the operational fact without the personal detail, that item goes to `07 System/Inbox/Needs Review/` and Graham decides.
+**Resident and applicant personal detail never enters a note.** No social security number, date of birth, bank or card number, government ID number, credit score, or income figure tied to a named individual. No medical detail. If a capture, a PDF, or an Elise.ai transcript carries one, do not transcribe it: write the operational fact without it ("application on unit 214 failed verification"), name the system of record where the detail lives, and move the original to `03 System/Sources/` if it must be kept at all. If you cannot state the operational fact without the personal detail, that item goes to `03 System/Inbox/Needs Review/` and Graham decides.
 
 **A unit number plus a resident name is fine.** The line is at financial, medical, and identity detail. Ordinary tenancy facts are allowed.
 
@@ -128,7 +128,7 @@ The Playbook folder holds the pipeline between them. A field note becomes a proc
 02 Notes/        all substantive work notes, organized by `type`
   _Portfolio.md    property index
   _People.md       people index
-07 System/
+03 System/
   Agent/           these contracts and the validator scripts
   Bases/           Dashboard.base, Portfolio.base, People.base
   Templates/       the managed-note templates
@@ -139,7 +139,7 @@ The Playbook folder holds the pipeline between them. A field note becomes a proc
   Documentation/   human-readable explanation
 ```
 
-There is no `Work OS` folder and no category folders for notes. `07 System/Documentation/ARCHITECTURE.md` has the reasoning.
+There is no `Work OS` folder and no category folders for notes. `03 System/Documentation/ARCHITECTURE.md` has the reasoning.
 
 **Storage is flat. Navigation is property-first.** A note lives in `02 Notes/`, declares its `type`, and carries a `property` link when relevant. The Property note assembles everything about that asset with queries. One source of truth, many views. Do not nest tasks or meetings inside per-property folders.
 
@@ -147,11 +147,11 @@ There is no `Work OS` folder and no category folders for notes. `07 System/Docum
 
 ## Note types, properties, statuses
 
-Every managed note carries `type`, `status`, `created` (ISO `YYYY-MM-DD`), and `origin` (`supernote`, `apple-shortcut`, `manual`, `ai`, `elise`, `migrated`). Templates in `07 System/Templates/` supply the defaults. The one exception is `garden`: a Garden note carries only `type`, `created`, and `category`, with no `status`, `origin`, or review scaffolding.
+Every managed note carries `type`, `status`, `created` (ISO `YYYY-MM-DD`), and `origin` (`supernote`, `apple-shortcut`, `manual`, `ai`, `elise`, `migrated`). Templates in `03 System/Templates/` supply the defaults. The one exception is `garden`: a Garden note carries only `type`, `created`, and `category`, with no `status`, `origin`, or review scaffolding.
 
 | `type` | Folder | `status` values |
 |---|---|---|
-| `capture` | `07 System/Inbox/Raw`, `Needs Review`, or `Failed` | `unprocessed` · `needs-review` · `failed` |
+| `capture` | `03 System/Inbox/Raw`, `Needs Review`, or `Failed` | `unprocessed` · `needs-review` · `failed` |
 | `garden` | `02 Notes/` (freestanding files) | none |
 | `project` | `02 Notes/` | `active` · `on-hold` · `complete` |
 | `property` | `02 Notes/` | `prospect` · `acquiring` · `renovating` · `stabilizing` · `operating` · `disposed` |
@@ -159,8 +159,8 @@ Every managed note carries `type`, `status`, `created` (ISO `YYYY-MM-DD`), and `
 | `meeting` | `02 Notes/` | `planned` · `complete` · `canceled` |
 | `contact` | `02 Notes/` | `active` · `inactive` |
 | `resource` | `02 Notes/` | `ready` · `active` · `archived` |
-| `source` | `07 System/Sources/` | `unreviewed` · `reviewed` · `archived` |
-| `automation-log` | `07 System/Logs/` | `success` · `notice` · `failed` |
+| `source` | `03 System/Sources/` | `unreviewed` · `reviewed` · `archived` |
+| `automation-log` | `03 System/Logs/` | `success` · `notice` · `failed` |
 
 Change a status only when its plain-language condition is objectively true. Never set `complete`, `archived`, `active` on an SOP, `operating` on a property, or `reviewed` by reading prose; those need a human action.
 
@@ -306,7 +306,7 @@ Graham writes by hand on a Supernote and exports to Google Drive. Both vaults re
 | `PERSONAL_*` | the gOS Drive inbox, processed by gOS |
 | no prefix or an unrecognized one | a holding folder, left untouched, reported |
 
-A Google Apps Script does the moving on a schedule. It never guesses: an unprefixed file goes to `Needs Prefix/` and stays there until Graham renames it. The script, the folder IDs, the trigger, and the exact naming rules are in `07 System/Documentation/SUPERNOTE-AUTOMATION.md`, and the script itself is `07 System/Agent/route-supernote.gs`.
+A Google Apps Script does the moving on a schedule. It never guesses: an unprefixed file goes to `Needs Prefix/` and stays there until Graham renames it. The script, the folder IDs, the trigger, and the exact naming rules are in `03 System/Documentation/SUPERNOTE-AUTOMATION.md`, and the script itself is `03 System/Agent/route-supernote.gs`.
 
 Rules for the DWELL operator:
 
@@ -323,25 +323,25 @@ The same prefix rule covers Apple Shortcut captures and anything else Graham dro
 
 | Input or result | Destination | Rule |
 |---|---|---|
-| Supernote or Apple Shortcut export in the DWELL Drive inbox | `07 System/Inbox/Raw/` processing record | Preserve the file and exact words; set `origin` from reliable metadata; strip the `WORK_` prefix from derived note names. |
-| Manual Obsidian quick capture | `07 System/Inbox/Raw/`, then `Archive/` after routing | Preserve original words. An instruction to the sweep is executed here; a quick-add that is filed reference is classified and moved to `02 Notes/` as a Garden note. |
+| Supernote or Apple Shortcut export in the DWELL Drive inbox | `03 System/Inbox/Raw/` processing record | Preserve the file and exact words; set `origin` from reliable metadata; strip the `WORK_` prefix from derived note names. |
+| Manual Obsidian quick capture | `03 System/Inbox/Raw/`, then `Archive/` after routing | Preserve original words. An instruction to the sweep is executed here; a quick-add that is filed reference is classified and moved to `02 Notes/` as a Garden note. |
 | Vault-root Markdown or PDF drop | `02 Notes/` as a Garden note | The sweep reads it, sets `type: garden` and `category`, and files it. No Needs Review stop. A clear instruction goes to `Raw/` instead; a clear meeting record becomes a `type: meeting` note. |
-| Date-named Daily Note | `07 System/Inbox/Raw/YYYY-MM-DD.md`, then `Archive/` | Read the run-date note or an explicit catch-up range, route its outcomes, then move any Daily Note older than the run date to `Archive/`. |
-| Ambiguous item | `07 System/Inbox/Needs Review/` | Explain what decision is needed. Do not guess. |
-| Failed item | `07 System/Inbox/Failed/` | Preserve the original with error context. |
-| Item carrying resident financial, medical, or identity detail | `07 System/Inbox/Needs Review/` | Only when the operational fact cannot be stated without it. See **Confidentiality**. |
+| Date-named Daily Note | `03 System/Inbox/Raw/YYYY-MM-DD.md`, then `Archive/` | Read the run-date note or an explicit catch-up range, route its outcomes, then move any Daily Note older than the run date to `Archive/`. |
+| Ambiguous item | `03 System/Inbox/Needs Review/` | Explain what decision is needed. Do not guess. |
+| Failed item | `03 System/Inbox/Failed/` | Preserve the original with error context. |
+| Item carrying resident financial, medical, or identity detail | `03 System/Inbox/Needs Review/` | Only when the operational fact cannot be stated without it. See **Confidentiality**. |
 | Project | `02 Notes/` | One `type: project` control note; related records use `project`. |
 | Property | `02 Notes/` | One `type: property` note per asset; related records use `property`. Graham creates it. |
 | Procedure, walkthrough, or how-we-do-this material | `02 Notes/` | Use `type: sop`, `status: draft`. Graham sets `active`. |
 | Meeting | `02 Notes/` | Use `type: meeting`; keep prep, notes, and follow-up together. |
 | Contact | `02 Notes/` | Use `type: contact`; one profile per explicitly added person. |
 | Person to remember, no CRM operation named | `02 Notes/Names to remember.md` | One appended line, name plus what makes them findable. Never a contact. |
-| Root image | `07 System/Attachments/` | Move without interpretation, rewrite exact embeds, never overwrite a collision. |
+| Root image | `03 System/Attachments/` | Move without interpretation, rewrite exact embeds, never overwrite a collision. |
 | Human task | `01 Home/Tasks.md` | Append from an explicit first-party action; link a Project or Property when supplied. |
 | Timed commitment | Google Calendar | Only when Graham asks for the event. Send invitations when he asks. Log the returned ID. |
 | Durable AI result | `02 Notes/` | Save the result as `type: resource`, not the prompt. Four dashboard fields required. Create a task for Graham to review it. |
 | Brief one-off AI result | log and email digest only | Do not create a Resource just to store it. |
-| Retained original document | `07 System/Sources/` | Leases, invoices, inspection reports, rent rolls. Preserve the original bytes. |
+| Retained original document | `03 System/Sources/` | Leases, invoices, inspection reports, rent rolls. Preserve the original bytes. |
 | Observation or how-it-works note Graham frames | `01 Home/Notes.md` | One bullet under the `# Month Day, Year` heading for its date, newest day on top; preserve his words. |
 | Anything personal that landed here | left in place, reported | Never copy it to gOS. See **The two vaults**. |
 | Request to change DWELL itself | `SYSTEM-REQUESTS.md`, then stop | System changes belong to the weekly review. Still do any executable part the same session. |
@@ -350,9 +350,9 @@ The same prefix rule covers Apple Shortcut captures and anything else Graham dro
 
 ## The nightly sweep
 
-At 2:00 AM `America/Chicago` the DWELL Claude Code Routine runs from a fresh cloud clone of `main` on a `claude/` branch. It processes every approved input, executes first-party commands, routes outcomes, writes a log to `07 System/Logs/`, opens and merges a pull request, and sends one email. It never pushes to `main` directly and never invents a destination. The full procedure, input-selection rules, reporting contract, and validators are in `NIGHTLY-SWEEP.md`.
+At 2:00 AM `America/Chicago` the DWELL Claude Code Routine runs from a fresh cloud clone of `main` on a `claude/` branch. It processes every approved input, executes first-party commands, routes outcomes, writes a log to `03 System/Logs/`, opens and merges a pull request, and sends one email. It never pushes to `main` directly and never invents a destination. The full procedure, input-selection rules, reporting contract, and validators are in `NIGHTLY-SWEEP.md`.
 
-Inputs: the DWELL Google Drive inbox, `07 System/Inbox/Raw/` (run-date Daily Note only), and Google Calendar for the seven-day meetings brief. No Readwise. No website mirror. Both of those belong to gOS.
+Inputs: the DWELL Google Drive inbox, `03 System/Inbox/Raw/` (run-date Daily Note only), and Google Calendar for the seven-day meetings brief. No Readwise. No website mirror. Both of those belong to gOS.
 
 ---
 
@@ -366,14 +366,14 @@ A change that should apply to both vaults gets reviewed once and applied twice, 
 
 ## Skills
 
-A skill lives in one of three tiers by where it must be triggered from: **repo** (`.claude/skills/<name>/SKILL.md`, git-tracked, the only tier a phone can reach), **user-level** (`~/.claude/skills/`, this Mac only), or a managed account bundle. Every repo-tier skill also ships an Obsidian-visible mirror at `07 System/Agent/Skills/<name>.md`; Graham edits the mirror and an agent copies it into the canonical `.claude/` path before the skill next runs.
+A skill lives in one of three tiers by where it must be triggered from: **repo** (`.claude/skills/<name>/SKILL.md`, git-tracked, the only tier a phone can reach), **user-level** (`~/.claude/skills/`, this Mac only), or a managed account bundle. Every repo-tier skill also ships an Obsidian-visible mirror at `03 System/Agent/Skills/<name>.md`; Graham edits the mirror and an agent copies it into the canonical `.claude/` path before the skill next runs.
 
 Before adding a skill, check for overlap. Ground every path and property in the real files. One clear job per skill.
 
 | Skill or automation | Trigger | Spec | Status |
 |---|---|---|---|
 | Nightly sweep (DWELL) | 2:00 AM `America/Chicago` | `NIGHTLY-SWEEP.md` | Sole nightly operator for this repo |
-| Supernote routing | Apps Script time trigger | `07 System/Documentation/SUPERNOTE-AUTOMATION.md` | Needs Graham to create the Drive folders and install the script |
+| Supernote routing | Apps Script time trigger | `03 System/Documentation/SUPERNOTE-AUTOMATION.md` | Needs Graham to create the Drive folders and install the script |
 | Tasks / notes / voice validators | after each write | `validate-tasks.mjs`, `validate-notes.mjs`, `validate-voice.mjs` | Active |
 | Weekly system review | Graham-triggered, weekly | this file plus `SYSTEM-REQUESTS.md` | Active |
 
@@ -393,6 +393,6 @@ Four surfaces, each answering one question. Sections are ordered by urgency, top
 
 `02 Notes/_People.md` answers **who needs something from me.**
 
-The views live in `07 System/Bases/` as `Dashboard.base`, `Portfolio.base`, and `People.base`, embedded by section name. Bases is a core plugin, so no community plugin is needed to render them. Task queries need the Tasks plugin, which is not yet installed in this vault; until it is, every `tasks` block renders as a plain code block. Prefer a Bases view over Dataview for anything new.
+The views live in `03 System/Bases/` as `Dashboard.base`, `Portfolio.base`, and `People.base`, embedded by section name. Bases is a core plugin, so no community plugin is needed to render them. Task queries need the Tasks plugin, which is not yet installed in this vault; until it is, every `tasks` block renders as a plain code block. Prefer a Bases view over Dataview for anything new.
 
 Presentation is `.obsidian/snippets/dwell-home.css`, applied by the `dwell-home` cssclass. Custom callouts: `today`, `decide` (reserved for things waiting on Graham), `portfolio`, `work`, `ahead`, `people`, `learn`, `book`, `system`.

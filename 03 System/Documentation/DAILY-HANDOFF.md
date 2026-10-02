@@ -14,7 +14,7 @@ The original transcript, image, PDF, or typed note remains the source. AI-create
 
 1. Add a few bullets to the daily note. Imperfect is fine.
 2. Drop handwritten pages into `Supernote/EXPORT/`.
-3. Run `bash "07 System/Scripts/dwell-sync.sh"` after the files finish syncing.
+3. Run `bash "03 System/Scripts/dwell-sync.sh"` after the files finish syncing.
 4. Commit and push before switching devices.
 
 ## Morning

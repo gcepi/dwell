@@ -1,5 +1,5 @@
 {
-  "folder": "07 System/Inbox/Raw",
+  "folder": "03 System/Inbox/Raw",
   "format": "YYYY-MM-DD",
-  "template": "07 System/Templates/Daily Note"
+  "template": "03 System/Templates/Daily Note"
 }

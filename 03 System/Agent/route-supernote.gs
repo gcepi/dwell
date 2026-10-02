@@ -21,7 +21,7 @@
  *   4. It never copies a file to both inboxes. One file, one destination.
  *
  * Setup, folder IDs, and the trigger are documented in
- * 07 System/Documentation/SUPERNOTE-AUTOMATION.md.
+ * 03 System/Documentation/SUPERNOTE-AUTOMATION.md.
  */
 
 // ---------------------------------------------------------------------------
@@ -222,7 +222,7 @@ function alert(summary, problems) {
       CONFIG.ALERT_EMAIL,
       'Supernote routing needs a look',
       summary + '\n\n' + problems.join('\n') +
-        '\n\nScript: route-supernote.gs\nDocs: 07 System/Documentation/SUPERNOTE-AUTOMATION.md\n'
+        '\n\nScript: route-supernote.gs\nDocs: 03 System/Documentation/SUPERNOTE-AUTOMATION.md\n'
     );
   } catch (error) {
     Logger.log('Could not send the alert email: ' + error.message);

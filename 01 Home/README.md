@@ -6,6 +6,6 @@
 4. [[01 Home/Tasks|Tasks]] only for dated Dwell follow-up until Asana is live.
 5. [[01 Home/System|System]] when you need to understand the machinery.
 
-Every substantive work note lives in `02 Notes/`. `07 System/` holds templates, scripts, sources, logs, and documentation.
+Every substantive work note lives in `02 Notes/`. `03 System/` holds templates, scripts, sources, logs, and documentation.
 
 Task queries require the Tasks plugin on each device. See [[01 Home/SETUP|Setup]] if a query renders as code.

@@ -2,7 +2,7 @@
 
 Dated intake log for changes to DWELL itself, bugs and feature requests together.
 
-The routine is the weekly system review in [[07 System/Agent/OPERATING-GUIDE|the operating guide]].
+The routine is the weekly system review in [[03 System/Agent/OPERATING-GUIDE|the operating guide]].
 
 gOS has its own separate log. A change that should apply to both vaults gets reviewed once and applied twice, in two commits in two repositories. Do not assume a gOS change landed here.
 
@@ -24,7 +24,7 @@ A dated request lands under a week heading below; the weekly review resolves it,
 **Shipped**
 
 - 2026-09-08 · Structural redesign. `05 Work OS/` dissolved, the `03` and `04` gaps closed, 7 flat top-level folders, the Playbook pipeline, the redesigned dashboard, 3 Bases files, `dwell-home.css`, and `ARCHITECTURE.md`. `AGENT-VOICE.md` reverted to byte-identical with gOS.
-- 2026-09-08 · Obsidian Bases views built: `Dashboard.base`, `Portfolio.base`, `People.base` in `07 System/Bases/`. Bases is a core plugin, so no community plugin was needed. Every dashboard section is now a live query instead of a folder link.
+- 2026-09-08 · Obsidian Bases views built: `Dashboard.base`, `Portfolio.base`, `People.base` in `03 System/Bases/`. Bases is a core plugin, so no community plugin was needed. Every dashboard section is now a live query instead of a folder link.
 - 2026-09-08 · Vault created. Folder structure, `CLAUDE.md`, `AGENTS.md`, `OPERATING-GUIDE.md`, `AGENT-VOICE.md`, `NIGHTLY-SWEEP.md`, 9 templates, 3 validators, the Supernote prefix router, and the two-operator documentation. Built in one autonomous session from the gOS system as the source pattern.
 
 ## Entry format
@@ -90,7 +90,7 @@ Keep the **Request** line in Graham's words. Anything the agent concludes belong
 - **Raised:** 2026-09-08 · flagged by the agent during setup
 - **Status:** open
 - **Request:** "Document all schema decisions (properties on Tasks, Contacts, Projects)"
-- **Context:** `property` statuses are `prospect` · `acquiring` · `renovating` · `stabilizing` · `operating` · `disposed`. They were picked to fit a group that buys undervalued complexes and restores them, with no knowledge of what the business actually calls these phases. Nothing else in the schema is this speculative. Correcting them touches `OPERATING-GUIDE.md`, `07 System/Templates/Property.md`, and any Property notes already written.
+- **Context:** `property` statuses are `prospect` · `acquiring` · `renovating` · `stabilizing` · `operating` · `disposed`. They were picked to fit a group that buys undervalued complexes and restores them, with no knowledge of what the business actually calls these phases. Nothing else in the schema is this speculative. Correcting them touches `OPERATING-GUIDE.md`, `03 System/Templates/Property.md`, and any Property notes already written.
 - **Outcome:**
 
 ### `sop` and `property` are new types, not Resources
@@ -126,7 +126,7 @@ Keep the **Request** line in Graham's words. Anything the agent concludes belong
 - **Raised:** 2026-09-08 · found by the agent while writing the router
 - **Status:** open
 - **Request:** "Supernote file tagging: filename convention (e.g., WORK_* for work exports, PERSONAL_* for personal)"
-- **Context:** The prefix router needs the source folder to be separate from both inboxes, or files loop forever. If the Supernote app currently syncs straight into the gOS "Claude Inbox" folder, that has to change: point the device at a new `Supernote Sync` folder and let the script move files from there. The script refuses to run if the source and a destination are the same folder, so the failure is loud rather than silent. Setup steps are in `07 System/Documentation/SUPERNOTE-AUTOMATION.md`.
+- **Context:** The prefix router needs the source folder to be separate from both inboxes, or files loop forever. If the Supernote app currently syncs straight into the gOS "Claude Inbox" folder, that has to change: point the device at a new `Supernote Sync` folder and let the script move files from there. The script refuses to run if the source and a destination are the same folder, so the failure is loud rather than silent. Setup steps are in `03 System/Documentation/SUPERNOTE-AUTOMATION.md`.
 - **Outcome:**
 
 ### DWELL has no `validate-nightly-log.mjs`
