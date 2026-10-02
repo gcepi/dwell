@@ -6,9 +6,10 @@ DWELL is the work vault for Dwell Communities: properties, projects, people, pro
 
 1. Open [[01 Home/Dashboard|Dashboard]]. Read "Waiting on you" first.
 2. Work the day. Write what you were told into [[01 Home/Notes|Notes]].
-3. Put every task in [[01 Home/Tasks|Tasks]]. One ledger. Every open task gets a due date.
-4. Drop handwritten PDFs into `Supernote/EXPORT/`.
-5. Run the end-of-day command.
+3. Keep [[01 Home/Hessel|Hessel]] open for the current list of asks, questions, and loose ends.
+4. Put every dated execution task in [[01 Home/Tasks|Tasks]]. One ledger. Every open task gets a due date.
+5. Drop handwritten PDFs into `Supernote/EXPORT/`.
+6. Run the end-of-day command.
 
 Once a week, open [[01 Home/Review|Review]] instead of the dashboard.
 

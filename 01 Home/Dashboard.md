@@ -10,6 +10,7 @@ cssclasses:
 > [!today] Start here
 > → [Open today's note](obsidian://daily?vault=dwell)
 > → [[01 Home/Notes|Write down what you learned yesterday]]
+> → [[01 Home/Hessel|Hessel working list]]
 > → [Calendar](https://calendar.google.com/calendar/u/0/r/day)
 >
 > ```tasks
