@@ -1,6 +1,6 @@
 # Hessel
 
-Use this page during or just before time with Hessel. It is a working list, not the task system of record. Move execution work into Asana once that exists, or into [[01 Home/Tasks|Tasks]] only when it needs a dated follow-up.
+Use this page during or just before time with Hessel. It is a working list, not a task system. Move committed execution work into Asana.
 
 ## On the table
 

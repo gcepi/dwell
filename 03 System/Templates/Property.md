@@ -32,16 +32,7 @@ Where the authoritative numbers for this property live: the management software,
 
 ## Open work
 
-```tasks
-path includes 01 Home/Tasks.md
-not done
-description includes [[{{title}}]]
-sort by due
-sort by priority
-short mode
-hide task count
-hide toolbar
-```
+Capture property-specific questions as plain bullets here. Move committed work into Asana.
 
 ## Log
 

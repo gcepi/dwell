@@ -10,21 +10,23 @@ By 2026-10-17, a Dwell workday ends with source material preserved, a short next
 
 - [x] Align the vault to Home → Notes → System.
 - [x] Create [[01 Home/System|a current-state page]] and simplify the architecture explanation.
-- [ ] Confirm the current Obsidian device has pulled this version and renders task queries.
+- [x] Confirm the current Obsidian device has pulled this version and shows the sequential folder structure.
+- [x] Retire the in-vault task engine. Plain Open loops remain for questions and follow-through; Asana will own committed work.
 
 ## 2026-10-03 — prove one input
 
-- [ ] Store the Grain credential securely and make one read-only API call.
+- [x] Store the Grain credential securely.
+- [ ] Repair gateway secret injection, then run `node "03 System/Agent/grain-token-info.mjs"` as the first read-only API call.
 - [ ] Process one real Grain meeting into a source-linked note and the Hessel page where relevant.
 - [ ] Process one Supernote export through the existing inbox route.
 
-**Done when:** one real workday has sources, a usable handoff, and no invented tasks.
+**Done when:** one real workday has sources, a usable handoff, and no invented follow-through.
 
 ## 2026-10-06 — use the daily loop
 
 - [ ] Use the daily handoff for two consecutive workdays.
 - [ ] Keep Hessel questions, decisions, and loose ends on [[01 Home/Hessel|Hessel]].
-- [ ] Decide which explicit signals become a task, a Hessel item, a procedure draft, or remain source-only.
+- [ ] Decide which explicit signals become an Asana item, a Hessel item, a procedure draft, or remain source-only.
 
 ## 2026-10-10 — establish the execution boundary
 

@@ -4,17 +4,7 @@ First time opening DWELL on a machine. About 10 minutes.
 
 `.obsidian/plugins/` is not in git, so community plugins install per machine. Everything else in this list is already committed and should already be correct.
 
-## 1. Install the Tasks plugin
-
-Required. Without it every `tasks` block on [[01 Home/Dashboard|Dashboard]] and [[01 Home/Review|Review]] renders as a plain code block. Already installed on the desktop as of 2026-09-08.
-
-Settings > Community plugins > Browse > search "Tasks" > Install > Enable.
-
-Or open [Tasks](obsidian://show-plugin?id=obsidian-tasks-plugin) directly.
-
-Dataview is not needed. The dashboard and portfolio views run on Bases, which is a core plugin and already enabled.
-
-## 2. Confirm Obsidian Git
+## 1. Confirm Obsidian Git
 
 It is the pull/push bridge for this vault. Confirm it is enabled under Settings > Community plugins. The end-of-day command pushes on its own and does not depend on the plugin.
 
@@ -26,11 +16,11 @@ Or open [Git](obsidian://show-plugin?id=obsidian-git) directly.
 2. Open the command palette (`Cmd/Ctrl-P`) and run **Git: Pull** or **Git: Pull from remote**.
 3. If Git reports conflicts, stop. Do not choose a side or force-push. Preserve the conflict screen and ask for recovery.
 4. Confirm the file tree shows exactly `01 Home`, `02 Notes`, `03 System`, and `Supernote`.
-5. Open [[01 Home/System|System]] and [[01 Home/Dashboard|Dashboard]]. Task blocks should render as task lists, not code.
+5. Open [[01 Home/System|System]] and [[01 Home/Dashboard|Dashboard]]. Open loops should be ordinary bullets.
 
-**Current-version checks:** this page says `03 System`; the Dashboard queries `02 Notes/Tasks.md`; and [[03 System/Documentation/ROADMAP|the roadmap]] is dated 2026-10-02 or later.
+**Current-version checks:** this page says `03 System`; the Dashboard links to [[01 Home/Open loops|Open loops]]; and [[03 System/Documentation/ROADMAP|the roadmap]] is dated 2026-10-02 or later.
 
-## 3. Confirm the folder settings
+## 2. Confirm the folder settings
 
 These are committed. Check them anyway.
 
@@ -44,13 +34,13 @@ These are committed. Check them anyway.
 | Files and links > New link format | Absolute path in vault |
 | Appearance > CSS snippets | `dwell-home` enabled |
 
-## 4. Point the Supernote at the export folder
+## 3. Point the Supernote at the export folder
 
 Handwritten PDFs go in `Supernote/EXPORT/` at the vault root. Copy or sync them there. No filename convention: any PDF in that folder gets picked up.
 
 The separate Google Drive router for cross-vault routing is a different channel. Setup for it is in `03 System/Documentation/SUPERNOTE-AUTOMATION.md`.
 
-## 5. Run the automation
+## 4. Run the automation
 
 From the vault root:
 
@@ -60,7 +50,7 @@ bash "03 System/Scripts/dwell-sync.sh"
 
 Expect a summary naming what it processed, any flags, and the git result. Needs `bash`, `git`, and `node`.
 
-## 6. Test it end to end
+## 5. Test it end to end
 
 1. Put any PDF in `Supernote/EXPORT/`.
 2. Wait 90 seconds. Files newer than that are held so a half-finished sync is never copied mid-write.
@@ -69,7 +59,7 @@ Expect a summary naming what it processed, any flags, and the git result. Needs 
 
 ## Still needs a browser
 
-These cannot be done from a terminal. They are also in [[01 Home/Tasks|Tasks]].
+These cannot be done from a terminal. Put any relevant unresolved question in [[01 Home/Open loops|Open loops]] until it moves to Asana.
 
 1. Confirm unit counts and occupancy for the 6 properties from the rent roll, then fill in `units`, `occupancy`, and `occupancy_as_of` on each property note.
 2. Create the Drive folders named in `03 System/Documentation/SUPERNOTE-AUTOMATION.md`, install the Apps Script, and paste the folder IDs into it.

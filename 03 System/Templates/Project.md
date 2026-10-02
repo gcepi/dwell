@@ -25,20 +25,9 @@ Two or three sentences, from evidence rather than impression.
 
 The next result you can meaningfully review. A checkpoint, not a task list.
 
-## Tasks
+## Open loops
 
-```tasks
-path includes 01 Home/Tasks.md
-not done
-description includes [[{{title}}]]
-sort by due
-sort by priority
-short mode
-hide task count
-hide toolbar
-```
-
-Add tasks to [[01 Home/Tasks|the ledger]] and link this Project note in each task description.
+Keep only unresolved questions and next decisions here. Committed execution work belongs in Asana.
 
 ## Decisions and references
 

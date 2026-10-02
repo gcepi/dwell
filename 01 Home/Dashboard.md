@@ -4,27 +4,14 @@ cssclasses:
 ---
 # Good morning
 
-> [!info] Task blocks need the [Tasks plugin](obsidian://show-plugin?id=obsidian-tasks-plugin).
-> Installed and enabled 2026-09-08. If a `tasks` block below renders as a plain code block, the plugin is off. Steps: [[01 Home/SETUP|SETUP]].
-
 > [!today] Start here
 > → [Open today's note](obsidian://daily?vault=dwell)
 > → [[01 Home/Notes|Write down what you learned yesterday]]
 > → [[01 Home/Hessel|Hessel working list]]
 > → [Calendar](https://calendar.google.com/calendar/u/0/r/day)
->
-> ```tasks
-> path includes 01 Home/Tasks.md
-> not done
-> (due before tomorrow) OR (status.type is IN_PROGRESS) OR (priority is high)
-> sort by status.type
-> sort by due
-> sort by priority
-> limit 8
-> short mode
-> hide task count
-> hide toolbar
-> ```
+
+> [!tip] Open loops
+> ![[01 Home/Open loops#On the table]]
 
 ## Waiting on you
 
@@ -61,17 +48,6 @@ Units and occupancy are blank. Fill each one in from the rent roll.
 > [!ahead] Meetings
 > ![[03 System/Bases/Dashboard.base#Upcoming Meetings]]
 >
-> ```tasks
-> path includes 01 Home/Tasks.md
-> not done
-> due after today
-> due before in 8 days
-> sort by due
-> limit 8
-> short mode
-> hide task count
-> hide toolbar
-> ```
 
 > [!people] People needing attention
 > ![[03 System/Bases/Dashboard.base#People Needing Attention]]
@@ -93,4 +69,4 @@ Field notes become procedure drafts. Write down what you were told today.
 > [!system] Last run
 > ![[03 System/Bases/Dashboard.base#Latest Run Log]]
 
-[[01 Home/Hessel|Hessel]] · [[01 Home/Tasks|Tasks]] · [[01 Home/Notes|Notes]] · [[01 Home/Review|Review]] · [[01 Home/System|System]]
+[[01 Home/Hessel|Hessel]] · [[01 Home/Open loops|Open loops]] · [[01 Home/Notes|Notes]] · [[01 Home/Review|Review]] · [[01 Home/System|System]]

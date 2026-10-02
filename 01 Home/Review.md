@@ -17,75 +17,9 @@ Each one is a judgment.
 5. **Occupancy dates.** Any `occupancy_as_of` older than a month is a number you should stop quoting.
 6. **What you learned and didn't write down.** Scroll [[01 Home/Notes|Notes]] and count the days with nothing under them.
 
-## Every open task, by date
+## Open loops
 
-```tasks
-path includes 01 Home/Tasks.md
-not done
-sort by due
-short mode
-hide task count
-hide toolbar
-```
-
-## Waiting on someone else
-
-```tasks
-path includes 01 Home/Tasks.md
-not done
-heading includes Waiting
-sort by due
-short mode
-hide task count
-hide toolbar
-```
-
-## Stale: open more than 30 days
-
-```tasks
-path includes 01 Home/Tasks.md
-not done
-created before 30 days ago
-sort by created
-short mode
-hide task count
-hide toolbar
-```
-
-## No date, which should only ever be Someday
-
-```tasks
-path includes 01 Home/Tasks.md
-not done
-no due date
-heading does not include Someday
-short mode
-hide task count
-hide toolbar
-```
-
-## Someday, worth a second look
-
-```tasks
-path includes 01 Home/Tasks.md
-not done
-heading includes Someday
-short mode
-hide task count
-hide toolbar
-```
-
-## Done in the last 7 days
-
-```tasks
-path includes 01 Home/Tasks.md
-done
-done after 7 days ago
-sort by done reverse
-short mode
-hide task count
-hide toolbar
-```
+Read [[01 Home/Open loops|Open loops]] and [[01 Home/Hessel|Hessel]] before the review. Committed work belongs in Asana.
 
 ## System
 

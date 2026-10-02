@@ -1,6 +1,6 @@
 # DWELL operating guide
 
-This is the one contract for how DWELL works and how an agent operates it. `AGENT-VOICE.md` is how it should sound. `CLAUDE.md` and `AGENTS.md` are thin entry hooks that point here and restate the trust boundary. `NIGHTLY-SWEEP.md` is the step-by-step nightly procedure.
+This is the one contract for how DWELL works and how an agent operates it. `AGENT-VOICE.md` is how it should sound. `NIGHTLY-SWEEP.md` is the step-by-step nightly procedure.
 
 DWELL is Graham's work vault for Dwell Communities. gOS is his personal knowledge and writing vault, in a separate repository. The two systems share a design and share nothing else. Read **The two vaults** below before you move anything across the line.
 
@@ -17,7 +17,7 @@ This list covers ordinary help. Do not ask permission for any of it.
 - Read anything in the vault and the connected repos.
 - Research, browse, and search. Produce a Resource or a written answer.
 - **Write and revise work prose.** Memos, SOP bodies, meeting summaries, project updates, analyses, vendor scopes, owner and board updates, training material, email and message drafts. Producing a good draft is the job. Saving a Gmail draft is fine. Sending is the one gated step (below).
-- Create and update tasks in `01 Home/Tasks.md`.
+- Add an explicitly requested unresolved question or follow-through to `01 Home/Open loops.md` as a plain bullet.
 - Add to `01 Home/Notes.md`: observations Graham frames as notes, and anything a capture frames as a note.
 - Route a capture or result to the folder the routing table names for it.
 - Create or update a Meeting, Property, SOP, Source, or Resource note.
@@ -122,7 +122,7 @@ The Playbook folder holds the pipeline between them. A field note becomes a proc
 ```text
 01 Home/         the action surfaces touched every day
   Dashboard.md     the morning doorway
-  Tasks.md         the one task ledger
+  Open loops.md    short questions and follow-through, not task management
   Notes.md         running observations, appended daily
   Review.md        the weekly review
 02 Notes/        all substantive work notes, organized by `type`
@@ -226,29 +226,15 @@ Example: `category: [process, "[[Elise.ai]]", "[[Dwell Communities]]"]`.
 
 ---
 
-## Tasks
+## Open loops
 
-One ledger: `01 Home/Tasks.md`. Dashboards, Project notes, and Property notes hold live queries, not copies. The Tasks plugin is the engine.
-
-```text
-- [ ] <action> [[Project or Property if supplied]] (from [[provenance]]) ➕ YYYY-MM-DD 📅 YYYY-MM-DD [⏫] 🆔 <stable-id>
-```
-
-- Checkbox: `[ ]` open, `[/]` in progress, `[x]` done, `[-]` canceled.
-- Project or Property link only when Graham supplied one. Never infer either from topic.
-- Provenance link for anything an automation created.
-- `➕` created date on every new managed task.
-- `📅` due date on every Open or Waiting task: a real supplied deadline, or the creation date as a same-day review date. Only `## Someday` omits it.
-- `⏫` high priority; no symbol means normal.
-- `🆔` stable ID for automated tasks so they deduplicate.
-
-Headings: `## Open`, `## Waiting` (blocked, checkbox stays `[ ]`), `## Someday` (deferred, undated, hidden from the daily view), `## Done` (optional). `validate-tasks.mjs` enforces the date rule.
+`01 Home/Open loops.md` is a short, human-maintained list of unresolved questions and follow-through. It has plain bullets only. Asana owns committed work, owners, dates, and completion. Agents add a bullet only when Graham explicitly asks to keep something visible; ambiguous or inferred follow-up goes to `03 System/Inbox/Needs Review/` instead.
 
 ---
 
 ## Projects
 
-One outcome-oriented control note per project in `02 Notes/`, from the `Project` template. It is a control page, not a second ledger: the outcome and finish line, what is in and out of scope, one next checkpoint, actionable work in `Tasks.md` with the exact `[[Project Name]]` link, and dated decisions and updates.
+One outcome-oriented control note per project in `02 Notes/`, from the `Project` template. It is a control page, not a second ledger: the outcome and finish line, what is in and out of scope, one next checkpoint, and dated decisions and updates. Committed execution work belongs in Asana.
 
 `status` is `active`, `on-hold`, or `complete`. `target_date` only when Graham supplies a real one.
 
@@ -292,7 +278,7 @@ One `type: contact` note per person in `02 Notes/`; the filename is the person's
 
 **Residents.** A resident gets a contact note only when Graham explicitly asks for one, and it holds tenancy and communication facts only. **Confidentiality** governs the rest. The system of record for a resident is the property management software, not this vault.
 
-**Attention.** A free-text flag, set or cleared only on Graham's explicit word, never because time passed. When Graham picks a concrete action, also route it to `Tasks.md`.
+**Attention.** A free-text flag, set or cleared only on Graham's explicit word, never because time passed. When Graham picks a concrete action, keep it as a bullet only if he explicitly wants it visible in Open loops; otherwise it belongs in Asana.
 
 ---
 
@@ -337,9 +323,9 @@ The same prefix rule covers Apple Shortcut captures and anything else Graham dro
 | Contact | `02 Notes/` | Use `type: contact`; one profile per explicitly added person. |
 | Person to remember, no CRM operation named | `02 Notes/Names to remember.md` | One appended line, name plus what makes them findable. Never a contact. |
 | Root image | `03 System/Attachments/` | Move without interpretation, rewrite exact embeds, never overwrite a collision. |
-| Human task | `01 Home/Tasks.md` | Append from an explicit first-party action; link a Project or Property when supplied. |
+| Explicit follow-through Graham wants visible | `01 Home/Open loops.md` | Append one plain bullet and link a source when supplied. |
 | Timed commitment | Google Calendar | Only when Graham asks for the event. Send invitations when he asks. Log the returned ID. |
-| Durable AI result | `02 Notes/` | Save the result as `type: resource`, not the prompt. Four dashboard fields required. Create a task for Graham to review it. |
+| Durable AI result | `02 Notes/` | Save the result as `type: resource`, not the prompt. Four dashboard fields required. Flag it in Open loops only if Graham asks. |
 | Brief one-off AI result | log and email digest only | Do not create a Resource just to store it. |
 | Retained original document | `03 System/Sources/` | Leases, invoices, inspection reports, rent rolls. Preserve the original bytes. |
 | Observation or how-it-works note Graham frames | `01 Home/Notes.md` | One bullet under the `# Month Day, Year` heading for its date, newest day on top; preserve his words. |
@@ -358,7 +344,7 @@ Inputs: the DWELL Google Drive inbox, `03 System/Inbox/Raw/` (run-date Daily Not
 
 ## The weekly system review
 
-Graham opens `SYSTEM-REQUESTS.md`, reads the newest week, and points an agent at it. For each `open` entry: restate the completion test from Graham's own words, confirm it is still live, ask him any decision only he can make (he is present), then make the smallest change that satisfies the test, preferring to configure what exists over adding something new. Verify the way the request would be judged. Update the entry in place with **Status** and **Outcome** and link every artifact; never delete an entry. Move anything that survives triage but is not built today into the backlog. Put human follow-up in `Tasks.md`. Commit on a branch, open one pull request per session with the week in the title, and merge.
+Graham opens `SYSTEM-REQUESTS.md`, reads the newest week, and points an agent at it. For each `open` entry: restate the completion test from Graham's own words, confirm it is still live, ask him any decision only he can make (he is present), then make the smallest change that satisfies the test, preferring to configure what exists over adding something new. Verify the way the request would be judged. Update the entry in place with **Status** and **Outcome** and link every artifact; never delete an entry. Move anything that survives triage but is not built today into the backlog. Put human follow-up in Open loops only when Graham asks. Commit on a branch, open one pull request per session with the week in the title, and merge.
 
 A change that should apply to both vaults gets reviewed once and applied twice, in two commits in two repositories. Do not assume a gOS change landed here.
 
@@ -374,7 +360,7 @@ Before adding a skill, check for overlap. Ground every path and property in the 
 |---|---|---|---|
 | Nightly sweep (DWELL) | 2:00 AM `America/Chicago` | `NIGHTLY-SWEEP.md` | Sole nightly operator for this repo |
 | Supernote routing | Apps Script time trigger | `03 System/Documentation/SUPERNOTE-AUTOMATION.md` | Needs Graham to create the Drive folders and install the script |
-| Tasks / notes / voice validators | after each write | `validate-tasks.mjs`, `validate-notes.mjs`, `validate-voice.mjs` | Active |
+| Notes / voice validators | after each write | `validate-notes.mjs`, `validate-voice.mjs` | Active |
 | Weekly system review | Graham-triggered, weekly | this file plus `SYSTEM-REQUESTS.md` | Active |
 
 The gOS skills `process-reflection` and `transcript-to-working-draft` are scoped to that repository and do not apply here.

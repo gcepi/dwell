@@ -40,16 +40,7 @@ Not yet determined. Choosing and migrating to one is the first project. Until th
 
 ## Open work
 
-```tasks
-path includes 01 Home/Tasks.md
-not done
-description includes [[Dwell at 750]]
-sort by due
-sort by priority
-short mode
-hide task count
-hide toolbar
-```
+Capture property-specific questions as plain bullets here. Committed work belongs in Asana.
 
 ## Log
 

@@ -6,7 +6,7 @@
 # Four steps, then a summary:
 #   1. Route Supernote PDFs from Supernote/EXPORT/ into 03 System/Inbox/Raw/
 #   2. Inventory the inbox: what is waiting, what is flagged, what failed
-#   3. Validate tasks, Notes, and prose against the voice rules
+#   3. Validate Notes and prose against the voice rules
 #   4. Commit and push
 #
 # Flags:
@@ -132,7 +132,6 @@ $detail"
 if [ "$have_node" -eq 0 ]; then
   note_flag "node not found; skipped all validation."
 else
-  run_validator "validate-tasks.mjs" "01 Home/Tasks.md" "01 Home/Tasks.md"
   run_validator "validate-notes.mjs" "01 Home/Notes.md" "01 Home/Notes.md"
 
   if [ -f "$AGENT/validate-voice.mjs" ]; then

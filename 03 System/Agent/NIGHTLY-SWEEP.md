@@ -67,7 +67,7 @@ Run the enumeration every night even when the date filter is expected to be empt
 10. Route only to approved destinations. If no direct mapping can be inferred, preserve the item and create a `capture` with `status: needs-review` in `03 System/Inbox/Needs Review/`.
 11. After properly routing a non-date-named manual Markdown capture, move that original to `03 System/Inbox/Archive/` with a processing note at the top. Move a retained non-Markdown source original to `03 System/Sources/`. A date-named Daily Note moves to Archive once its date has passed and the sweep has read it; the current run-date note stays in `Raw/` until the next run so Obsidian can reopen it by date.
 12. Write the run log to `03 System/Logs/` with deterministic `success`, `notice`, or `failed` status, following **Reporting contract** below.
-13. Run `node "03 System/Agent/validate-notes.mjs"`, `node "03 System/Agent/validate-tasks.mjs"`, and `node "03 System/Agent/validate-voice.mjs" "<log path>"`. Correct every validation error before committing; a voice failure means rewriting the offending line, not suppressing the check.
+13. Run `node "03 System/Agent/validate-notes.mjs"` and `node "03 System/Agent/validate-voice.mjs" "<log path>"`. Correct every validation error before committing; a voice failure means rewriting the offending line, not suppressing the check.
 14. Open and merge the pull request per **GitHub pull-request transport**.
 15. After the merge, send the log's **Run digest** to `gcepica@gmail.com` as one `multipart/alternative` Gmail message. Subject: `DWELL brief · YYYY-MM-DD`. Every string the email adds on top of the Run digest passes `AGENT-VOICE.md`. Do not send Slack.
 
@@ -286,7 +286,7 @@ A capture goes to the roster when it names a person and something that identifie
 - Project result → Resource with the supplied Project link.
 - Property result → Resource with the supplied Property link. Never create the Property note itself.
 - Procedure material → SOP draft per **Drafting work prose overnight**.
-- Human task → append to `01 Home/Tasks.md` using its exact task-line contract. Use Graham's supplied due date; otherwise use the creation date as the visible review date. Omit a due date only when Graham explicitly defers the item without commitment.
+- Explicit follow-through Graham wants visible → append one plain bullet to `01 Home/Open loops.md`. Inferred or ambiguous follow-through goes to Needs Review; committed execution work belongs in Asana.
 - Explicit complete timed commitment → Google Calendar; record the external ID in the log.
 - Meeting record → `02 Notes/` as a `type: meeting` note.
 - Filed reference → `02 Notes/` as a Garden note.
