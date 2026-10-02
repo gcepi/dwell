@@ -59,7 +59,7 @@ Run the enumeration every night even when the date filter is expected to be empt
 2. Inventory all three inputs even when a channel is empty.
 3. Select Drive captures by **Drive inbox selection** above. For those captures, correct an obvious typo, transcription error, or OCR error only when one reading is substantially more likely and the resulting action remains concrete. If the action, object, person, property, or number is genuinely ambiguous, preserve it in Needs Review rather than creating a garbled task.
 4. Screen every capture for resident and applicant financial, medical, or identity detail before writing anything derived from it. Follow **Confidentiality** in the operating guide: write the operational fact without the personal detail, name the system of record, retain the original in `07 System/Sources/` only if it must be kept. If the operational fact cannot be stated without the personal detail, the item goes to Needs Review. Do this before step 5.
-5. For `07 System/Inbox/Raw/`, inspect every non-date-named direct child regardless of age, except the structural `.gitkeep`. A page that gives the sweep an instruction is executed here; a page that is filed reference, not an instruction and not a meeting record, is classified and moved to `06 Playbook/Field notes/` as a Garden note (see **Filing to the Garden**). Processed Markdown captures then move to Archive; retained PDFs, images, and other source originals move to Sources. For Daily Notes, read only `YYYY-MM-DD.md` matching the run date or an explicitly requested catch-up range, then move any Daily Note whose date is before the run date to `07 System/Inbox/Archive/`.
+5. For `07 System/Inbox/Raw/`, inspect every non-date-named direct child regardless of age, except the structural `.gitkeep`. A page that gives the sweep an instruction is executed here; a page that is filed reference, not an instruction and not a meeting record, is classified and moved to `02 Notes/` as a Garden note (see **Filing to the Garden**). Processed Markdown captures then move to Archive; retained PDFs, images, and other source originals move to Sources. For Daily Notes, read only `YYYY-MM-DD.md` matching the run date or an explicitly requested catch-up range, then move any Daily Note whose date is before the run date to `07 System/Inbox/Archive/`.
 6. Add today's date heading to `01 Home/Notes.md` every run, even when nothing routes there. Write it as `# Month Day, Year` (for example `# September 9, 2026`) at the very top of the file, above the previous newest day, with one blank line after it. If the run-date heading is already present because Graham wrote earlier that day, leave it and its content in place.
 7. Read Google Calendar events whose start falls from the run time through the next seven days. Sort ascending by start. Preserve day/date, the event's displayed time, and title only in the digest; do not copy descriptions, attendees, locations, or meeting links into any digest text. If Calendar is not connected or the read fails, record the exact limitation, use `Calendar unavailable.` in Meetings, and set the run to at least `notice`.
 8. Inspect image files placed at the vault root. Move each to `07 System/Attachments/` and rewrite exact Markdown or wikilink embeds to the new path when the filename is unique. Never overwrite an existing attachment. A filename collision or ambiguous reference goes to Needs Review. This is attachment housekeeping, not permission to interpret the image.
@@ -101,7 +101,7 @@ This sweep may write prose.
 
 When a capture carries a walkthrough, a ride-along, a recorded conversation, an interview with someone who knows a process, or Graham's own notes about how something works:
 
-1. Draft the SOP. `06 Playbook/Procedures/`, `status: draft`, from the SOP template. Ordered imperative steps, one action each, systems named, failure path included. Write it for someone in their second week on the job.
+1. Draft the SOP in `02 Notes/`, `type: sop`, `status: draft`, from the SOP template. Ordered imperative steps, one action each, systems named, failure path included. Write it for someone in their second week on the job.
 2. Set `owner` only when the capture names the accountable person. Leave it blank otherwise and say so.
 3. Never set `status: active`. That is Graham's.
 4. When the draft contradicts an existing `active` SOP, do not edit the active note. File the draft and put the contradiction in **Needs review** naming both files.
@@ -253,26 +253,26 @@ Highlights live in the PDF annotation layer, not in its text. Extracting page te
 
 ## Filing to the Garden
 
-The Garden is for filed work reference in `06 Playbook/Field notes/`: a system walkthrough, a loose reference, a note about a person with no CRM profile, working notes on a property. The sweep files it with no Needs Review stop.
+The Garden is for filed work reference in `02 Notes/`: a system walkthrough, a loose reference, a note about a person with no CRM profile, working notes on a property. The sweep files it with no Needs Review stop.
 
-Three sources reach the Garden: a Markdown or PDF file dropped at the vault root, a non-instruction manual capture in `Raw/`, and a Daily Note passage Graham frames as standalone reference. A page that instructs the sweep is still executed in `Raw/`. A genuine meeting record still goes to `05 Meetings/`. Procedure material goes to `06 Playbook/Procedures/` as a draft. When it is unclear which one a file is, treat "instruction," "meeting record," and "procedure" as the narrow cases and default to the Garden.
+Three sources reach the Garden: a Markdown or PDF file dropped at the vault root, a non-instruction manual capture in `Raw/`, and a Daily Note passage Graham frames as standalone reference. A page that instructs the sweep is still executed in `Raw/`. A genuine meeting record becomes a `type: meeting` note. Procedure material becomes a `type: sop` draft. When it is unclear which one a file is, treat "instruction," "meeting record," and "procedure" as the narrow cases and default to the Garden.
 
 For each Garden note:
 
-1. Write the file to `06 Playbook/Field notes/` under a short descriptive name from Graham's own words, with any `WORK_` prefix stripped. Preserve the body verbatim; do not add a title line or a summary.
+1. Write the file to `02 Notes/` under a short descriptive name from Graham's own words, with any `WORK_` prefix stripped. Preserve the body verbatim; do not add a title line or a summary.
 2. Frontmatter is exactly three keys: `type: garden`, `created` (run date, ISO), and `category`.
 3. `category` is a YAML list. The first element is the coarse bucket, one of `reference`, `person`, `property-note`, `project-note`, `process`, `admin`, `misc`.
 4. After the bucket, add one `[[wikilink]]` for every proper-noun entity the note names: people, organizations, properties, projects, places, products, systems. Copy the name as written. This is a mechanical index of what the note says. Never add a theme, a topic, or a "relates to."
 5. Do not set `status` or `origin`. Do not create a task or a review item.
 6. Move the source capture to Archive (Markdown) or Sources (PDF) with a processing note pointing at the new Garden file.
 
-Deduplicate by searching `06 Playbook/Field notes/` for an existing Garden note with the same source provenance before writing a new one.
+Deduplicate by searching `02 Notes/` for an existing Garden note with the same source provenance before writing a new one.
 
 ### The names roster
 
-`03 People/Names to remember.md` is one running Garden file for people Graham wants to find later without a CRM profile. A maintenance tech, a name from a call, someone he met once on a walkthrough.
+`02 Notes/Names to remember.md` is one running Garden file for people Graham wants to find later without a CRM profile. A maintenance tech, a name from a call, someone he met once on a walkthrough.
 
-A capture goes to the roster when it names a person and something that identifies them, implies Graham wants to remember it, and asks for nothing else. It goes to `03 People/` instead when Graham names a CRM operation on that person. When ambiguous, choose the roster.
+A capture goes to the roster when it names a person and something that identifies them, implies Graham wants to remember it, and asks for nothing else. It becomes a `type: contact` note in `02 Notes/` instead when Graham names a CRM operation on that person. When ambiguous, choose the roster.
 
 1. Search the roster for the name first. An existing line is `already processed`. New detail extends the existing line rather than starting another.
 2. Append one bullet to the end of the list. The file stays in the order Graham added people.
@@ -282,16 +282,16 @@ A capture goes to the roster when it names a person and something that identifie
 
 ## Commands and results
 
-- Durable result → `06 Playbook/Reference/`, `type: resource`, `status: ready`, `origin: ai`, `created` set to the run date. All five are required. **Output details** must name the dashboard view that will surface it.
+- Durable result → `02 Notes/`, `type: resource`, `status: ready`, `origin: ai`, `created` set to the run date. All five are required. **Output details** must name the dashboard view that will surface it.
 - Project result → Resource with the supplied Project link.
 - Property result → Resource with the supplied Property link. Never create the Property note itself.
 - Procedure material → SOP draft per **Drafting work prose overnight**.
 - Human task → append to `01 Home/Tasks.md` using its exact task-line contract. Use Graham's supplied due date; otherwise use the creation date as the visible review date. Omit a due date only when Graham explicitly defers the item without commitment.
 - Explicit complete timed commitment → Google Calendar; record the external ID in the log.
-- Meeting record → `05 Meetings/`.
-- Filed reference → `06 Playbook/Field notes/` as a Garden note.
-- A person Graham wants to remember, with no CRM operation named → one line in `03 People/Names to remember.md`.
-- Explicit CRM command → match, create, or update one profile under `03 People/` by following the operating guide's Relationships section.
+- Meeting record → `02 Notes/` as a `type: meeting` note.
+- Filed reference → `02 Notes/` as a Garden note.
+- A person Graham wants to remember, with no CRM operation named → one line in `02 Notes/Names to remember.md`.
+- Explicit CRM command → match, create, or update one `type: contact` profile in `02 Notes/` by following the operating guide's Relationships section.
 - Brief one-off result → log and email digest only.
 - Blocked or ambiguous command → `07 System/Inbox/Needs Review/` and the log.
 - Anything that looks personal rather than work → left in place, reported, never moved to gOS.

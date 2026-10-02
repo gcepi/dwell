@@ -19,7 +19,7 @@ Prior background is 5 years in mission-driven startups: consulting service deliv
 
 ## The portfolio
 
-Six properties, all metro Atlanta, every one a 1965 to 1986 building bought and renovated. Notes are in `02 Portfolio/`, and the index at `02 Portfolio/_Portfolio.md` has the shape of it.
+Six properties, all metro Atlanta, every one a 1965 to 1986 building bought and renovated. Notes are in `02 Notes/`, and the index at `02 Notes/_Portfolio.md` has the shape of it.
 
 Houston was sold and is out of the portfolio. Dwell's public copy still lists it as a market.
 
@@ -37,7 +37,7 @@ The scope is larger than the name suggests. There is no property management soft
 
 Two jobs in the first 90 days.
 
-1. **Write down how the business actually works.** Every walkthrough, every ride-along, every "that's just how we do it" answer becomes a field note in `06 Playbook/Field notes/` and then a procedure draft in `06 Playbook/Procedures/`.
+1. **Write down how the business actually works.** Every walkthrough, every ride-along, every "that's just how we do it" answer becomes a `type: garden` note and then a `type: sop` note in `02 Notes/`.
 2. **Run the work.** Properties, projects, tasks, meetings, people.
 
 ## The first people

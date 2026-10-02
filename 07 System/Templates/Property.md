@@ -24,7 +24,7 @@ Current phase and what the phase means here. What has to happen before it moves 
 | Regional | |
 | Maintenance lead | |
 
-Link a contact in `03 People/` when one exists.
+Link a `type: contact` note in `02 Notes/` when one exists.
 
 ## Systems of record
 

@@ -27,5 +27,5 @@ Add tasks to [[01 Home/Tasks|the ledger]] and link this Meeting note in each tas
 No H1. The filename is the meeting.
 Optional properties: project, property.
 A walkthrough, ride-along, or "that's just how we do it" answer belongs here
-first and then becomes a Procedure draft in 06 Playbook/Procedures/.
+first and then becomes a `type: sop` note in 02 Notes/.
 -->

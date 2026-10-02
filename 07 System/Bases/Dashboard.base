@@ -44,7 +44,6 @@ views:
     name: Portfolio
     filters:
       and:
-        - file.folder == "02 Portfolio"
         - type == "property"
         - status != "disposed"
     order:
@@ -63,7 +62,6 @@ views:
     name: Active Projects
     filters:
       and:
-        - file.folder == "04 Projects"
         - type == "project"
         - status == "active"
     order:
@@ -77,7 +75,6 @@ views:
     name: Procedure Drafts
     filters:
       and:
-        - file.folder == "06 Playbook/Procedures"
         - type == "sop"
         - status == "draft"
     order:
@@ -107,7 +104,6 @@ views:
     name: Unreviewed AI Results
     filters:
       and:
-        - file.folder == "06 Playbook/Reference"
         - type == "resource"
         - origin == "ai"
         - status == "ready"
@@ -123,7 +119,6 @@ views:
     name: People Needing Attention
     filters:
       and:
-        - file.folder == "03 People"
         - type == "contact"
         - attention != ""
     order:
@@ -137,7 +132,6 @@ views:
     name: Upcoming Meetings
     filters:
       and:
-        - file.folder == "05 Meetings"
         - type == "meeting"
         - status == "planned"
     order:
@@ -152,8 +146,7 @@ views:
     name: Recent Field Notes
     filters:
       and:
-        - file.folder == "06 Playbook/Field notes"
-        - file.ext == "md"
+        - type == "garden"
     order:
       - file.name
       - category
@@ -166,7 +159,6 @@ views:
     name: Active Procedures
     filters:
       and:
-        - file.folder == "06 Playbook/Procedures"
         - type == "sop"
         - status == "active"
     order:

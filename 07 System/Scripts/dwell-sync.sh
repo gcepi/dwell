@@ -42,11 +42,7 @@ INBOX="07 System/Inbox"
 # them, so AGENT-VOICE.md can never pass its own check.
 VOICE_DIRS=(
   "01 Home"
-  "02 Portfolio"
-  "03 People"
-  "04 Projects"
-  "05 Meetings"
-  "06 Playbook"
+  "02 Notes"
   "07 System/Logs"
   "07 System/Sources"
 )

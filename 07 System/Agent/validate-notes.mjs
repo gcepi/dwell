@@ -5,7 +5,7 @@
 // The file is Graham's own work observations plus anything the nightly sweep
 // appends, organised newest-first under H1 date headings written as
 // "Month Day, Year". Structure inside a day is his and is not checked.
-// Freestanding Garden files elsewhere in 06 Playbook/Field notes/ are not checked here.
+// Freestanding Garden files in 02 Notes/ are not checked here.
 //
 // Real errors: a non-date first heading, date headings out of newest-first
 // order, or an unparseable date heading.

@@ -58,7 +58,7 @@ The nightly sweep follows the same rules. A first-party capture that names an ac
 
 - Execute an instruction in the same session unless it says to save, defer, queue, or ask first. Do not build a prompt queue unless requested.
 - Before reporting something done, check the result against the exact action, depth, and deliverable asked for. A created file is not proof of completion.
-- Deliverables must be reachable from `01 Home/Dashboard.md`. Durable AI output goes to `06 Playbook/Reference/` with `type: resource`, `status: ready`, `origin: ai`, and `created` set to the run date, and the log names the view that surfaces it. `07 System/Documentation/` is never a deliverable home.
+- Deliverables must be reachable from `01 Home/Dashboard.md`. Durable AI output goes to `02 Notes/` with `type: resource`, `status: ready`, `origin: ai`, and `created` set to the run date, and the log names the view that surfaces it. `07 System/Documentation/` is never a deliverable home.
 - Every number in a deliverable traces to a source you can name. A rent roll figure cites the rent roll and its date. A pricing recommendation cites what it was built from.
 - Every prose string an agent emits passes `AGENT-VOICE.md`, whatever its length: the nightly log, Needs Review notes, digest bullets, commit messages, and pull-request descriptions. Fixed identifiers are not prose and are out of scope: filenames, wikilink targets, branch names, the email subject slug, and the digest's `label · value` separator. `validate-voice.mjs` checks the log before the pull request merges; the rest is on the writing agent.
 - **A dated bullet uses a middot (`·`), never a dash.** `- 2026-09-08 · Turn scope approved.` This applies in every `## Updates`, `## Log`, `## Notes`, and `## Changes` section. It is the same separator the run digest uses. Every template here follows it.
@@ -120,19 +120,14 @@ The Playbook folder holds the pipeline between them. A field note becomes a proc
 ## Folders
 
 ```text
-01 Home/         the four surfaces touched every day
+01 Home/         the action surfaces touched every day
   Dashboard.md     the morning doorway
   Tasks.md         the one task ledger
   Notes.md         running observations, appended daily
   Review.md        the weekly review
-02 Portfolio/    one note per property, plus _Portfolio.md
-03 People/       one contact per person, plus _People.md and Names to remember.md
-04 Projects/     one control note per project
-05 Meetings/     prep, notes, follow-up
-06 Playbook/
-  Field notes/     how the business actually works, as Graham finds out
-  Procedures/      one note per procedure (draft, active, retired)
-  Reference/       durable reference and AI work product
+02 Notes/        all substantive work notes, organized by `type`
+  _Portfolio.md    property index
+  _People.md       people index
 07 System/
   Agent/           these contracts and the validator scripts
   Bases/           Dashboard.base, Portfolio.base, People.base
@@ -144,9 +139,9 @@ The Playbook folder holds the pipeline between them. A field note becomes a proc
   Documentation/   human-readable explanation
 ```
 
-There is no `Work OS` folder and there are no gaps in the numbering. `07 System/Documentation/ARCHITECTURE.md` has the reasoning.
+There is no `Work OS` folder and no category folders for notes. `07 System/Documentation/ARCHITECTURE.md` has the reasoning.
 
-**Storage is flat. Navigation is property-first.** A note lives in exactly one folder by its type, carries a `property` link, and the Property note assembles everything about that asset with queries. One source of truth, many views. Do not nest tasks or meetings inside per-property folders.
+**Storage is flat. Navigation is property-first.** A note lives in `02 Notes/`, declares its `type`, and carries a `property` link when relevant. The Property note assembles everything about that asset with queries. One source of truth, many views. Do not nest tasks or meetings inside per-property folders.
 
 ---
 
@@ -157,13 +152,13 @@ Every managed note carries `type`, `status`, `created` (ISO `YYYY-MM-DD`), and `
 | `type` | Folder | `status` values |
 |---|---|---|
 | `capture` | `07 System/Inbox/Raw`, `Needs Review`, or `Failed` | `unprocessed` · `needs-review` · `failed` |
-| `garden` | `06 Playbook/Field notes/` (freestanding files) | none |
-| `project` | `04 Projects/` | `active` · `on-hold` · `complete` |
-| `property` | `02 Portfolio/` | `prospect` · `acquiring` · `renovating` · `stabilizing` · `operating` · `disposed` |
-| `sop` | `06 Playbook/Procedures/` | `draft` · `active` · `retired` |
-| `meeting` | `05 Meetings/` | `planned` · `complete` · `canceled` |
-| `contact` | `03 People/` | `active` · `inactive` |
-| `resource` | `06 Playbook/Reference/` | `ready` · `active` · `archived` |
+| `garden` | `02 Notes/` (freestanding files) | none |
+| `project` | `02 Notes/` | `active` · `on-hold` · `complete` |
+| `property` | `02 Notes/` | `prospect` · `acquiring` · `renovating` · `stabilizing` · `operating` · `disposed` |
+| `sop` | `02 Notes/` | `draft` · `active` · `retired` |
+| `meeting` | `02 Notes/` | `planned` · `complete` · `canceled` |
+| `contact` | `02 Notes/` | `active` · `inactive` |
+| `resource` | `02 Notes/` | `ready` · `active` · `archived` |
 | `source` | `07 System/Sources/` | `unreviewed` · `reviewed` · `archived` |
 | `automation-log` | `07 System/Logs/` | `success` · `notice` · `failed` |
 
@@ -205,7 +200,7 @@ Two surfaces, split by whether Graham appends to it daily or files it once.
 
 `01 Home/Notes.md` is the running file.
 
-`06 Playbook/Field notes/` holds the filed ones: freestanding notes on how the business actually works. A field note is what somebody told you. A procedure is what the company does. The first becomes the second.
+`02 Notes/` holds the filed ones: freestanding notes on how the business actually works. A field note is what somebody told you. A procedure is what the company does. The first becomes the second.
 
 ### `01 Home/Notes.md`
 
@@ -219,7 +214,7 @@ One running file with no YAML and no document title. It holds Graham's own obser
 
 ### Field notes
 
-A freestanding file in `06 Playbook/Field notes/` for filed work reference that is not a running observation and not a managed record: a screenshot walkthrough of a system, a loose reference doc, notes on a person with no CRM profile, working notes on a property before it earns a note of its own.
+A freestanding `type: garden` file in `02 Notes/` for filed work reference that is not a running observation and not a managed record: a screenshot walkthrough of a system, a loose reference doc, notes on a person with no CRM profile, working notes on a property before it earns a note of its own.
 
 Frontmatter is only `type: garden`, `created`, and `category`. No `status`, no review step, no manual triage: the sweep classifies and files it, and it sits there until Graham searches for it.
 
@@ -227,7 +222,7 @@ Frontmatter is only `type: garden`, `created`, and `category`. No `status`, no r
 
 Example: `category: [process, "[[Elise.ai]]", "[[Dwell Communities]]"]`.
 
-`03 People/Names to remember.md` is one running Garden file for people Graham wants to find again without giving each one a CRM profile: a maintenance tech at a vendor, someone he met once at a walkthrough, a name from a call. One line each, name plus what makes them findable. Never a contact until he says so.
+`02 Notes/Names to remember.md` is one running Garden file for people Graham wants to find again without giving each one a CRM profile: a maintenance tech at a vendor, someone he met once at a walkthrough, a name from a call. One line each, name plus what makes them findable. Never a contact until he says so.
 
 ---
 
@@ -253,7 +248,7 @@ Headings: `## Open`, `## Waiting` (blocked, checkbox stays `[ ]`), `## Someday` 
 
 ## Projects
 
-One outcome-oriented control note per project in `04 Projects/`, from the `Project` template. It is a control page, not a second ledger: the outcome and finish line, what is in and out of scope, one next checkpoint, actionable work in `Tasks.md` with the exact `[[Project Name]]` link, and dated decisions and updates.
+One outcome-oriented control note per project in `02 Notes/`, from the `Project` template. It is a control page, not a second ledger: the outcome and finish line, what is in and out of scope, one next checkpoint, actionable work in `Tasks.md` with the exact `[[Project Name]]` link, and dated decisions and updates.
 
 `status` is `active`, `on-hold`, or `complete`. `target_date` only when Graham supplies a real one.
 
@@ -263,7 +258,7 @@ Agents keep Project notes current from attributable evidence: a dated line under
 
 ## Properties
 
-One note per property in `02 Portfolio/`, named the way the business names it. This is the anchor most other records hang from.
+One `type: property` note in `02 Notes/`, named the way the business names it. This is the anchor most other records hang from.
 
 The note holds what stays true about the asset: where it is, how many units, what condition it is in, what phase it is in, who is accountable, and a dated log of what has changed. `units`, `market`, and `address` come from a document or from Graham, never from inference.
 
@@ -275,7 +270,7 @@ Live task and meeting queries belong in the Property note. Copies of tasks do no
 
 ## SOPs
 
-One note per procedure in `06 Playbook/Procedures/`. Write it in a form someone else could follow.
+One `type: sop` note in `02 Notes/`. Write it in a form someone else could follow.
 
 An SOP note says what triggers the procedure, who owns it, the ordered steps, what systems are touched, how you know it worked, and what to do when it fails. `owner` names the accountable person. `review_due` is set only when Graham sets one.
 
@@ -287,7 +282,7 @@ When a drafted SOP contradicts an existing `active` one, do not edit the active 
 
 ## Relationships (the work CRM)
 
-One contact note per person in `03 People/`; the filename is the person's useful name and the body is the source of truth.
+One `type: contact` note per person in `02 Notes/`; the filename is the person's useful name and the body is the source of truth.
 
 **Recognize a command.** Clear signals: `CRM:` or `Contact:` followed by add, update, remember, set or clear attention, or report. Natural wording counts when the person and operation are unambiguous. A name in prose, an email thread, or a calendar event is not permission to create or edit a contact.
 
@@ -329,22 +324,22 @@ The same prefix rule covers Apple Shortcut captures and anything else Graham dro
 | Input or result | Destination | Rule |
 |---|---|---|
 | Supernote or Apple Shortcut export in the DWELL Drive inbox | `07 System/Inbox/Raw/` processing record | Preserve the file and exact words; set `origin` from reliable metadata; strip the `WORK_` prefix from derived note names. |
-| Manual Obsidian quick capture | `07 System/Inbox/Raw/`, then `Archive/` after routing | Preserve original words. An instruction to the sweep is executed here; a quick-add that is filed reference is classified and moved to `06 Playbook/Field notes/` as a Garden note. |
-| Vault-root Markdown or PDF drop | `06 Playbook/Field notes/` as a Garden note | The sweep reads it, sets `type: garden` and `category`, and files it. No Needs Review stop. A clear instruction goes to `Raw/` instead; a clear meeting record goes to `05 Meetings/`. |
+| Manual Obsidian quick capture | `07 System/Inbox/Raw/`, then `Archive/` after routing | Preserve original words. An instruction to the sweep is executed here; a quick-add that is filed reference is classified and moved to `02 Notes/` as a Garden note. |
+| Vault-root Markdown or PDF drop | `02 Notes/` as a Garden note | The sweep reads it, sets `type: garden` and `category`, and files it. No Needs Review stop. A clear instruction goes to `Raw/` instead; a clear meeting record becomes a `type: meeting` note. |
 | Date-named Daily Note | `07 System/Inbox/Raw/YYYY-MM-DD.md`, then `Archive/` | Read the run-date note or an explicit catch-up range, route its outcomes, then move any Daily Note older than the run date to `Archive/`. |
 | Ambiguous item | `07 System/Inbox/Needs Review/` | Explain what decision is needed. Do not guess. |
 | Failed item | `07 System/Inbox/Failed/` | Preserve the original with error context. |
 | Item carrying resident financial, medical, or identity detail | `07 System/Inbox/Needs Review/` | Only when the operational fact cannot be stated without it. See **Confidentiality**. |
-| Project | `04 Projects/` | One control note; related records use `project`. |
-| Property | `02 Portfolio/` | One note per asset; related records use `property`. Graham creates it. |
-| Procedure, walkthrough, or how-we-do-this material | `06 Playbook/Procedures/` | Draft it as `status: draft`. Graham sets `active`. |
-| Meeting | `05 Meetings/` | Keep prep, notes, and follow-up together. |
-| Contact | `03 People/` | One profile per explicitly added person; follow the CRM rules. |
-| Person to remember, no CRM operation named | `03 People/Names to remember.md` | One appended line, name plus what makes them findable. Never a contact. |
+| Project | `02 Notes/` | One `type: project` control note; related records use `project`. |
+| Property | `02 Notes/` | One `type: property` note per asset; related records use `property`. Graham creates it. |
+| Procedure, walkthrough, or how-we-do-this material | `02 Notes/` | Use `type: sop`, `status: draft`. Graham sets `active`. |
+| Meeting | `02 Notes/` | Use `type: meeting`; keep prep, notes, and follow-up together. |
+| Contact | `02 Notes/` | Use `type: contact`; one profile per explicitly added person. |
+| Person to remember, no CRM operation named | `02 Notes/Names to remember.md` | One appended line, name plus what makes them findable. Never a contact. |
 | Root image | `07 System/Attachments/` | Move without interpretation, rewrite exact embeds, never overwrite a collision. |
 | Human task | `01 Home/Tasks.md` | Append from an explicit first-party action; link a Project or Property when supplied. |
 | Timed commitment | Google Calendar | Only when Graham asks for the event. Send invitations when he asks. Log the returned ID. |
-| Durable AI result | `06 Playbook/Reference/` | Save the result, not the prompt. Four dashboard fields required. Create a task for Graham to review it. |
+| Durable AI result | `02 Notes/` | Save the result as `type: resource`, not the prompt. Four dashboard fields required. Create a task for Graham to review it. |
 | Brief one-off AI result | log and email digest only | Do not create a Resource just to store it. |
 | Retained original document | `07 System/Sources/` | Leases, invoices, inspection reports, rent rolls. Preserve the original bytes. |
 | Observation or how-it-works note Graham frames | `01 Home/Notes.md` | One bullet under the `# Month Day, Year` heading for its date, newest day on top; preserve his words. |
@@ -394,9 +389,9 @@ Four surfaces, each answering one question. Sections are ordered by urgency, top
 
 `01 Home/Review.md` answers **what's drifting.** Six judgment questions, then every task view worth having.
 
-`02 Portfolio/_Portfolio.md` answers **how the assets are doing,** and holds what is known about the shape of the portfolio.
+`02 Notes/_Portfolio.md` answers **how the assets are doing,** and holds what is known about the shape of the portfolio.
 
-`03 People/_People.md` answers **who needs something from me.**
+`02 Notes/_People.md` answers **who needs something from me.**
 
 The views live in `07 System/Bases/` as `Dashboard.base`, `Portfolio.base`, and `People.base`, embedded by section name. Bases is a core plugin, so no community plugin is needed to render them. Task queries need the Tasks plugin, which is not yet installed in this vault; until it is, every `tasks` block renders as a plain code block. Prefer a Bases view over Dataview for anything new.
 

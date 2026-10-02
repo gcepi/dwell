@@ -28,7 +28,6 @@ views:
     name: All Properties
     filters:
       and:
-        - file.folder == "02 Portfolio"
         - type == "property"
     order:
       - file.name
@@ -47,7 +46,6 @@ views:
     name: Missing Numbers
     filters:
       and:
-        - file.folder == "02 Portfolio"
         - type == "property"
         - status != "disposed"
         - units == ""
@@ -62,7 +60,6 @@ views:
     name: Occupancy
     filters:
       and:
-        - file.folder == "02 Portfolio"
         - type == "property"
         - status == "operating"
     order:
@@ -77,7 +74,6 @@ views:
     name: Cards
     filters:
       and:
-        - file.folder == "02 Portfolio"
         - type == "property"
         - status != "disposed"
     order:

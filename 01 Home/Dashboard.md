@@ -45,7 +45,7 @@ Every item here needs a decision.
 > [!portfolio] Six properties, all metro Atlanta
 > ![[07 System/Bases/Dashboard.base#Portfolio]]
 >
-> [[02 Portfolio/_Portfolio|Open the portfolio →]]
+> [[02 Notes/_Portfolio|Open the portfolio →]]
 
 Units and occupancy are blank. Fill each one in from the rent roll.
 
@@ -54,7 +54,7 @@ Units and occupancy are blank. Fill each one in from the rent roll.
 > [!work] Active
 > ![[07 System/Bases/Dashboard.base#Active Projects]]
 >
-> [[04 Projects/|All projects →]]
+> [[02 Notes/|All work notes →]]
 
 ## This week
 
@@ -76,7 +76,7 @@ Units and occupancy are blank. Fill each one in from the rent roll.
 > [!people] People needing attention
 > ![[07 System/Bases/Dashboard.base#People Needing Attention]]
 >
-> [[03 People/_People|Everyone →]] · [[03 People/Names to remember|Names to remember]]
+> [[02 Notes/_People|Everyone →]] · [[02 Notes/Names to remember|Names to remember]]
 
 ## What you're learning
 
@@ -93,4 +93,4 @@ Field notes become procedure drafts. Write down what you were told today.
 > [!system] Last run
 > ![[07 System/Bases/Dashboard.base#Latest Run Log]]
 
-[[01 Home/README|README]] · [[01 Home/SETUP|Setup]] · [[01 Home/Review|Weekly review]] · [[01 Home/Tasks|Task ledger]] · [[07 System/Documentation/ROADMAP|Roadmap]] · [[07 System/Agent/NOW|Now, work]] · [[07 System/Agent/OPERATING-GUIDE|Operating guide]] · [[07 System/Agent/SYSTEM-REQUESTS|System requests]] · [[07 System/Inbox/Raw/|Raw inbox]]
+[[01 Home/Hessel|Hessel]] · [[01 Home/Tasks|Tasks]] · [[01 Home/Notes|Notes]] · [[01 Home/Review|Review]] · [[01 Home/System|System]]

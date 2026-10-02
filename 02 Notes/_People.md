@@ -4,7 +4,7 @@ cssclasses:
 ---
 # People
 
-The work CRM. One note per person in this folder, grouped by the `relationship` property.
+The work CRM. One note per person in `02 Notes/`, grouped by the `relationship` property.
 
 > [!people] Everyone
 > ![[07 System/Bases/People.base#Everyone]]
@@ -38,7 +38,7 @@ Each one needs a note in this folder. Graham creates them.
 
 An agent creates a contact only on an explicit instruction: add this person, update them, set or clear attention. A name in an email thread or a calendar invite is not permission.
 
-Someone Graham only wants to be able to find again gets one line in [[03 People/Names to remember|Names to remember]].
+Someone Graham only wants to be able to find again gets one line in [[02 Notes/Names to remember|Names to remember]].
 
 No dossiers. No inferred sentiment. No judgment about a colleague's competence, motives, or character. No resident financial, medical, or identity detail, ever.
 

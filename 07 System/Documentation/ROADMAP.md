@@ -1,62 +1,45 @@
-# Dwell system roadmap
+# Dwell roadmap
 
-Created 2026-10-02. This is a short execution plan, not a standing invitation to rebuild the system.
+Updated 2026-10-02. This is the development queue. It is not an instruction to keep tinkering between dates.
 
-## Definition of success
+## Success
 
-By 2026-10-17, each Dwell workday can end with sources preserved, a useful next-day handoff, and no uncertainty about where company work belongs. Meeting transcripts, handwritten notes, and typed notes remain readable source material. The system may suggest organization, but it does not silently convert every thought into a task or replace Asana as the execution system.
+By 2026-10-17, a Dwell workday ends with source material preserved, a short next-day handoff, and a clear place for active execution. You can see what the system knows, what still needs your judgment, and what it did not do.
 
-## 2026-10-02 -- restore the plumbing
+## 2026-10-02 — make the system legible
 
-- [x] Push the existing gOS and Dwell commits after restoring GitHub's Git credential helper.
-- [ ] Store and validate the Grain API token, then prove a read-only meeting-list or token-info request.
-- [ ] Confirm the Mac/Obsidian copy has caught up with `origin/main`. The repository's Work Dashboard already points at `02 Notes/Tasks.md`; a screen that still shows `05 Work OS/Tasks/Tasks.md` is displaying an older local copy.
+- [x] Align the vault to Home → Notes → System.
+- [x] Create [[01 Home/System|a current-state page]] and simplify the architecture explanation.
+- [ ] Confirm the current Obsidian device has pulled this version and renders task queries.
 
-**Done when:** both repositories show clean `main` branches, Grain can perform one read-only call, and the live desktop renders current dashboard content.
+## 2026-10-03 — prove one input
 
-## 2026-10-03 -- one complete capture loop
+- [ ] Store the Grain credential securely and make one read-only API call.
+- [ ] Process one real Grain meeting into a source-linked note and the Hessel page where relevant.
+- [ ] Process one Supernote export through the existing inbox route.
 
-- [ ] Process one real Grain meeting and one Supernote export through the current Dwell inbox.
-- [ ] Check the resulting source links, Hessel list, and daily note by hand.
-- [ ] Record only the concrete routing rules that proved necessary. No autonomous task creation for Dwell execution work.
+**Done when:** one real workday has sources, a usable handoff, and no invented tasks.
 
-**Done when:** tomorrow morning has an accurate, source-linked handoff that Graham can use without reopening every capture.
+## 2026-10-06 — use the daily loop
 
-## 2026-10-05 -- settle the daily rhythm
+- [ ] Use the daily handoff for two consecutive workdays.
+- [ ] Keep Hessel questions, decisions, and loose ends on [[01 Home/Hessel|Hessel]].
+- [ ] Decide which explicit signals become a task, a Hessel item, a procedure draft, or remain source-only.
 
-- [ ] Use the end-of-day handoff on two consecutive workdays.
-- [ ] Decide whether the system should send a reminder when no end-of-day capture arrives. Keep it opt-in and nonintrusive.
-- [ ] Identify the few signals that deserve promotion: explicit asks for Hessel, a named follow-up, an approved procedure, or a source that needs review.
+## 2026-10-10 — establish the execution boundary
 
-**Done when:** the handoff feels like Graham's own working memory, not an AI daily brief that guessed wrong.
+- [ ] Choose the smallest Asana shape for execution work: projects, owners, due dates, and transfer rule.
+- [ ] Test one manually approved transfer from Dwell to Asana after Asana exists.
+- [ ] Write the model-cost policy: deterministic scripts, OAuth reasoning, and any API budget.
 
-## 2026-10-07 -- Asana boundary
+## 2026-10-17 — evaluate optional tools
 
-- [ ] Decide the smallest Asana shape for execution work: projects, owners, due dates, and what qualifies for transfer from Dwell.
-- [ ] Keep Dwell as the source and thinking layer. Test one manually approved transfer only after Asana exists.
+- [ ] Run a 20-item Jev test for one advisory classification: Hessel list, needs review, or source-only.
+- [ ] Consider MiniMax and ClawRouter only if an API budget and a repeatable low-risk batch job exist.
+- [ ] Run one read-only screen-control test if the Mac node is available.
 
-**Done when:** Hessel conversations and working context stay in Dwell while active project execution has one clear home.
+## Deferred
 
-## 2026-10-10 -- model-cost decision
-
-- [ ] Keep ChatGPT/Codex OAuth for frontier reasoning and the existing deterministic scripts for mechanical work.
-- [ ] Run one bounded MiniMax API evaluation against a non-sensitive, repeatable Dwell triage sample. Set a hard monthly budget before any unattended use.
-- [ ] Decide whether a ClawRouter deployment is justified by actual multi-provider API use, rather than by the desire to optimize in advance.
-
-**Done when:** there is one written model policy: which work is deterministic, which uses OAuth, which may use a paid API, and the monthly ceiling.
-
-## 2026-10-17 -- Jev decision gate
-
-- [ ] Evaluate Jev only on one typed, advisory question with an auditable answer set, such as `Hessel list | needs review | archive as source`.
-- [ ] Compare its decision and confidence with a manual review of 20 real captures.
-- [ ] Adopt it only if it reduces review work without hiding uncertainty. Otherwise, leave it out.
-
-**Done when:** Jev is either a measured, narrow gate or explicitly deferred. It is not a second brain and does not decide Dwell priorities.
-
-## Deferred until the capture loop is trusted
-
-- Screen control: start with a bounded, read-only Mac test after the above loop works. Never make a primary Mac password the integration mechanism.
-- Local embeddings or BGE-M3: reconsider only if FTS recall proves inadequate. It is a retrieval component, not a reasoning model.
-- New aesthetic system: collect references now; implement after the operating loop is useful.
-- New providers, databases, and automation platforms: no action without a demonstrated gap.
-
+- Visual redesign after the daily capture loop proves useful.
+- Local embeddings only if FTS recall proves inadequate.
+- New services, databases, and unattended GUI work only after a demonstrated gap.

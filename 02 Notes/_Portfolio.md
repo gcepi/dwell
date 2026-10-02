@@ -21,13 +21,13 @@ Blank until it comes off a rent roll.
 
 ## How the portfolio is shaped
 
-Three of the six sit on one stretch of Hollywood Road in Atlanta's Westside: [[02 Portfolio/Dwell at Westside 3|Westside 3]], [[02 Portfolio/Dwell at Hollywood|Hollywood]], and [[02 Portfolio/Dwell at the View|the View]]. They share a single leasing email. Whether they share staff, budget, and reporting is unknown and blocks procedure writing.
+Three of the six sit on one stretch of Hollywood Road in Atlanta's Westside: [[02 Notes/Dwell at Westside 3|Westside 3]], [[02 Notes/Dwell at Hollywood|Hollywood]], and [[02 Notes/Dwell at the View|the View]]. They share a single leasing email. Whether they share staff, budget, and reporting is unknown and blocks procedure writing.
 
-Two are separately branded and do not carry the Dwell name in front of residents: [[02 Portfolio/Ilion|Ilion]] and [[02 Portfolio/Clairmont Crest|Clairmont Crest]]. Find out why before touching either one's marketing or its Elise.ai configuration.
+Two are separately branded and do not carry the Dwell name in front of residents: [[02 Notes/Ilion|Ilion]] and [[02 Notes/Clairmont Crest|Clairmont Crest]]. Find out why before touching either one's marketing or its Elise.ai configuration.
 
-[[02 Portfolio/Clairmont Crest|Clairmont Crest]] is 55-plus. Age restriction changes fair-housing exposure, leasing cycle, and resident communication. Assume every portfolio-wide procedure needs a Clairmont exception until someone proves otherwise.
+[[02 Notes/Clairmont Crest|Clairmont Crest]] is 55-plus. Age restriction changes fair-housing exposure, leasing cycle, and resident communication. Assume every portfolio-wide procedure needs a Clairmont exception until someone proves otherwise.
 
-[[02 Portfolio/Dwell at 750|Dwell at 750]] is the largest asset and the company's headquarters address. It is the only property with published construction phasing.
+[[02 Notes/Dwell at 750|Dwell at 750]] is the largest asset and the company's headquarters address. It is the only property with published construction phasing.
 
 ## Open questions
 
