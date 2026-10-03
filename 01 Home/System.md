@@ -31,9 +31,10 @@ It preserves source material, makes it findable, gives you action-oriented views
 
 ## Current constraints
 
-- Grain’s credential is stored securely. The first read-only validation is pending a gateway secret-injection repair.
-- Supernote material is sourced from the personal Google Drive Export folder, then preserved before interpretation.
+- Grain is live. Nine recordings from Sept. 28 through Oct. 2 are preserved under `03 System/Sources/Grain/`.
+- Supernote material enters through the personal Google Drive Export folder. Originals are preserved in gOS; Dwell-relevant pages are mirrored here before interpretation.
+- The capture rule is documented in [[03 System/Documentation/CAPTURE-CONTRACT|Capture contract]].
 
 ## Next
 
-[[03 System/Documentation/ROADMAP|Open the dated roadmap]] · [[03 System/Documentation/DAILY-HANDOFF|Daily handoff]] · [[03 System/Documentation/ARCHITECTURE|Architecture]] · [[01 Home/SETUP|Device setup]]
+[[03 System/Documentation/ROADMAP|Open the dated roadmap]] · [[03 System/Documentation/CAPTURE-CONTRACT|Capture contract]] · [[03 System/Documentation/DAILY-HANDOFF|Daily handoff]] · [[03 System/Documentation/ARCHITECTURE|Architecture]] · [[01 Home/SETUP|Device setup]]

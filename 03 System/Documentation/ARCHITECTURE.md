@@ -12,7 +12,7 @@ Three layers, one job each.
 
 ## Home
 
-Dashboard, Hessel, Tasks, Notes, Review, and System are small action surfaces. They link to the next useful place rather than attempting to summarize the whole business. Bases provide portfolio and relationship views. The Tasks plugin provides checkbox queries; if a task block renders as code, install or enable Tasks on that device.
+Dashboard, Hessel, Open loops, Notes, Review, and System are small action surfaces. They link to the next useful place rather than attempting to summarize the whole business. Bases provide portfolio and relationship views. Asana will own committed execution; the vault keeps source and reasoning.
 
 ## Notes
 
@@ -31,4 +31,4 @@ Every substantive work note lives in `02 Notes/`, regardless of whether it is a 
 
 ## Current dependencies
 
-Grain intake, Drive routing, scheduled nightly processing, and screen control are not assumed live merely because their files exist. Their current state and dates are in [[03 System/Documentation/ROADMAP|Roadmap]].
+Grain and Supernote source intake are proven manually. Scheduled Dwell processing and screen control are not assumed live merely because their files exist. Their current state and dates are in [[03 System/Documentation/ROADMAP|Roadmap]]. The routing rule is in [[03 System/Documentation/CAPTURE-CONTRACT|Capture contract]].

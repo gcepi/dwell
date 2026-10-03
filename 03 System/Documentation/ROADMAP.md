@@ -16,9 +16,10 @@ By 2026-10-17, a Dwell workday ends with source material preserved, a short next
 ## 2026-10-03 — prove one input
 
 - [x] Store the Grain credential securely.
-- [ ] Repair gateway secret injection, then run `node "03 System/Agent/grain-token-info.mjs"` as the first read-only API call.
-- [ ] Process one real Grain meeting into a source-linked note and the Hessel page where relevant.
-- [ ] Process one Supernote export through the existing inbox route.
+- [x] Prove read-only Grain access and preserve nine current-week transcripts.
+- [x] Process Grain into a source-linked [[02 Notes/Week of 2026-10-03 - operating handoff|operating handoff]] and update the Hessel page.
+- [x] Mirror four Dwell-relevant Supernote pages from the existing personal Drive intake.
+- [x] Document one [[03 System/Documentation/CAPTURE-CONTRACT|capture contract]] across Grain, Supernote, gOS mobile capture, and Dwell.
 
 **Done when:** one real workday has sources, a usable handoff, and no invented follow-through.
 
@@ -27,6 +28,7 @@ By 2026-10-17, a Dwell workday ends with source material preserved, a short next
 - [ ] Use the daily handoff for two consecutive workdays.
 - [ ] Keep Hessel questions, decisions, and loose ends on [[01 Home/Hessel|Hessel]].
 - [ ] Decide which explicit signals become an Asana item, a Hessel item, a procedure draft, or remain source-only.
+- [ ] Decide whether Grain import should remain manual or run on a schedule after two clean batches.
 
 ## 2026-10-10 — establish the execution boundary
 

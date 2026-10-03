@@ -8,12 +8,15 @@ Updated 2026-10-02. Start with [[01 Home/System|System]] for the human view and 
 - Dashboard, Hessel, Notes, Open loops, Review, System, and the daily-handoff guide are available from Home.
 - The vault uses plain bullets for unresolved questions and follow-through. Asana will own committed tasks.
 - GitHub `main` is the shared repository history.
+- Grain read-only access is proven. Nine current-week recordings are preserved as source notes.
+- Four Dwell-relevant Supernote pages are mirrored from the personal Drive intake into `03 System/Sources/Supernote/`.
+- [[02 Notes/Week of 2026-10-03 - operating handoff|The current operating handoff]] connects Ryan's handoff, property health, turns, Elise, and approvals to their original sources.
 
 ## Needs verification before trust
 
-- Grain token validation is blocked by gateway secret injection; `grain-token-info.mjs` is ready for the first read-only call.
-- The Dwell daily intake has not yet processed a real Grain transcript end to end.
-- Supernote-to-gOS intake depends on the separate personal Google Drive workflow.
+- Grain import has passed one real nine-recording batch. It is not scheduled yet.
+- Supernote mirroring has passed one manual batch. The gOS filing judgment still decides which pages are Dwell-relevant.
+- The daily handoff needs two consecutive workdays of use before it becomes a routine.
 
 ## Not part of Dwell
 

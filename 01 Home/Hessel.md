@@ -28,6 +28,10 @@ Use this page during or just before time with Hessel. It is a working list, not 
 - How do we think about turn expenses?
 - How do we think about capital improvements?
 - What is the working framework for resident conflict?
+- Which property-health goals should vary by property rather than use one portfolio-wide target?
+- Who should replace Ryan as approver in Emburse, Amazon, and the systems that still route to him?
+- Which AppFolio reports and historical records are required before Elise becomes the primary PMS?
+- What is the smallest turn-tracking standard Lourdes and the 750 team can maintain every morning?
 
 ## Still to recover
 
@@ -35,4 +39,4 @@ Use this page during or just before time with Hessel. It is a working list, not 
 
 ## Source
 
-Captured from the gOS note `Hey, C-3PO. This one is for you.` on 2026-10-01. The source note remains the record when a detail here is incomplete or uncertain.
+Started from the gOS note `Hey, C-3PO. This one is for you.` on 2026-10-01 and updated from [[02 Notes/Week of 2026-10-03 - operating handoff|this week's operating handoff]]. The source notes remain the record when a detail here is incomplete or uncertain.
