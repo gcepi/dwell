@@ -20,6 +20,7 @@ By 2026-10-17, a Dwell workday ends with source material preserved, a short next
 - [x] Process Grain into a source-linked [[02 Notes/Week of 2026-10-03 - operating handoff|operating handoff]] and update the Hessel page.
 - [x] Mirror four Dwell-relevant Supernote pages from the existing personal Drive intake.
 - [x] Document one [[03 System/Documentation/CAPTURE-CONTRACT|capture contract]] across Grain, Supernote, gOS mobile capture, and Dwell.
+- [x] Save Graham's Oct. 2 Hessel recap as the weekly style contract.
 
 **Done when:** one real workday has sources, a usable handoff, and no invented follow-through.
 
