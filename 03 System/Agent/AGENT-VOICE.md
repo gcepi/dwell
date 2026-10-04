@@ -35,7 +35,7 @@ Write like a sharp human who happens to be typing.
 
 - Numbers as digits (3 years, 10 tools, 500 users).
 - Contractions always.
-- **NO em dashes in a sentence.** Never use one as a pause, an aside, or a stand-in for a comma, colon, or semicolon. That is the AI tell, and it's the only thing this rule is for. The only dash allowed in running prose is between numbers, for a range or a duration: `7–11 AM`, `1–5`, `pages 3–7`, `2026-09-02`. Anywhere a dash is doing a comma's or a colon's job, rewrite the line. This rule is about generated prose, not identifiers: filenames, wikilink targets, and branch names are fixed identifiers, not sentences, and an em dash inside one is never a violation (see "Execution standard" in `OPERATING-GUIDE.md`).
+- **NO em dashes in a sentence.** Never use one as a pause, an aside, or a stand-in for a comma, colon, or semicolon. That is the AI tell, and it's the only thing this rule is for. The only dash allowed in running prose is between numbers, for a range or a duration: `7–11 AM`, `1–5`, `pages 3–7`, `2026-09-02`. Anywhere a dash is doing a comma's or a colon's job, rewrite the line. This rule is about generated prose, not identifiers: filenames, wikilink targets, and branch names are fixed identifiers, not sentences.
 - Bold sparingly: 1-2 key moments per section.
 - Code blocks for specific prompts, commands, or tool outputs.
 - Use formatting like salt. Headers, bullets, numbered lists: only when they earn it.
@@ -227,7 +227,6 @@ This document captures taste. It is a guide. Apply it with judgment.
 > "Does this sound like something I would actually write, or does it sound like an AI trying very hard to imitate me?"
 
 If it feels forced, pull back. Inhabit the voice.
-
 
 
 

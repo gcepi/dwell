@@ -1,5 +1,7 @@
 # Nightly sweep, DWELL
 
+> Historical September 2026 proposal. No Dwell nightly sweep is currently scheduled. Start at [[03 System/Documentation/STATUS|Operational status]].
+
 # Overview
 
 Triage the trusted inputs, act according to the instructions or implications, and report it in the morning brief email.

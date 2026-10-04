@@ -1,6 +1,6 @@
 # Dwell roadmap
 
-Updated 2026-10-02. This is the development queue. It is not an instruction to keep tinkering between dates.
+Updated 2026-10-04. This is the development queue. It is not an instruction to keep tinkering between dates.
 
 ## Success
 
@@ -24,6 +24,14 @@ By 2026-10-17, a Dwell workday ends with source material preserved, a short next
 
 **Done when:** one real workday has sources, a usable handoff, and no invented follow-through.
 
+## 2026-10-04 -- restore device sync
+
+- [x] Prove the server checkout and GitHub remote are clean and mutually current.
+- [x] Check repository objects, branch tracking, pull, push, and conflict markers.
+- [x] Identify the missing Dwell device path: Obsidian Git was absent from the committed enabled-plugin list.
+- [x] Restore Obsidian Git to the committed plugin configuration.
+- [ ] Prove one pull and one backup/push from the actual Dwell Obsidian device.
+
 ## 2026-10-06 — use the daily loop
 
 - [ ] Use the daily handoff for two consecutive workdays.
@@ -45,6 +53,5 @@ By 2026-10-17, a Dwell workday ends with source material preserved, a short next
 
 ## Deferred
 
-- Visual redesign after the daily capture loop proves useful.
 - Local embeddings only if FTS recall proves inadequate.
 - New services, databases, and unattended GUI work only after a demonstrated gap.

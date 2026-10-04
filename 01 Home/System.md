@@ -33,6 +33,7 @@ It preserves source material, makes it findable, gives you action-oriented views
 
 - Grain is live. Nine recordings from Sept. 28 through Oct. 2 are preserved under `03 System/Sources/Grain/`.
 - Supernote material enters through the personal Google Drive Export folder. Originals are preserved in gOS; Dwell-relevant pages are mirrored here before interpretation.
+- GitHub and the server checkout are healthy. The Dwell vault had omitted Obsidian Git from its enabled-plugin list; that configuration is repaired, with one device pull/push proof still required.
 - The capture rule is documented in [[03 System/Documentation/CAPTURE-CONTRACT|Capture contract]].
 
 ## Next

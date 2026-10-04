@@ -1,5 +1,7 @@
 # System requests
 
+> Historical September 2026 intake log. Current development work is tracked in [[03 System/Documentation/ROADMAP|Roadmap]].
+
 Dated intake log for changes to DWELL itself, bugs and feature requests together.
 
 The routine is the weekly system review in [[03 System/Agent/OPERATING-GUIDE|the operating guide]].

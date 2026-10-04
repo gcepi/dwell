@@ -1,5 +1,7 @@
 # Two nightly operators
 
+> Historical proposal from September 2026. Dwell does not currently run this nightly operator. Use [[03 System/Documentation/STATUS|Operational status]] and [[03 System/Documentation/ROADMAP|Roadmap]] for the live system.
+
 Two vaults run two nightly sweeps. Neither touches the other's repository.
 
 | Routine name | Repository | Time (America/Chicago) | Contract |

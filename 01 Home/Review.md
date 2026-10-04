@@ -23,6 +23,7 @@ Read [[01 Home/Open loops|Open loops]] and [[01 Home/Hessel|Hessel]] before the 
 
 ## System
 
-- [[03 System/Agent/SYSTEM-REQUESTS|System requests]], newest week first. The review's agenda.
-- [[03 System/Inbox/Needs Review/|Needs Review]], anything still open from the nightly sweeps.
+- [[03 System/Documentation/STATUS|Operational status]], what is proven and what still needs verification.
+- [[03 System/Documentation/ROADMAP|Roadmap]], the dated development queue.
+- [[03 System/Inbox/Needs Review/|Needs Review]], anything preserved because the source was ambiguous.
 - [[03 System/Inbox/Failed/|Failed]], which should normally be empty.

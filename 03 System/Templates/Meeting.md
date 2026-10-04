@@ -21,7 +21,7 @@ One sentence. What has to be true when this meeting ends.
 
 ## Follow-up
 
-Add tasks to [[01 Home/Tasks|the ledger]] and link this Meeting note in each task description.
+Committed follow-through belongs in Asana. Keep a short unresolved question in [[01 Home/Open loops|Open loops]] only when it is not yet execution work.
 
 <!--
 No H1. The filename is the meeting.

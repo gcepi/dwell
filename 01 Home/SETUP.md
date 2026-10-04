@@ -2,11 +2,13 @@
 
 First time opening DWELL on a machine. About 10 minutes.
 
-`.obsidian/plugins/` is not in git, so community plugins install per machine. Everything else in this list is already committed and should already be correct.
+`.obsidian/plugins/` is not in git, so community-plugin code installs per machine. The enabled-plugin list is committed.
 
 ## 1. Confirm Obsidian Git
 
-It is the pull/push bridge for this vault. Confirm it is enabled under Settings > Community plugins. The end-of-day command pushes on its own and does not depend on the plugin.
+It is the pull/push bridge for this vault. Confirm it is installed and enabled under Settings > Community plugins.
+
+If **Git: Pull** is missing from the command palette, enable Obsidian Git manually first. This is the one-time bootstrap path when an older Dwell copy has the plugin installed but disabled.
 
 Or open [Git](obsidian://show-plugin?id=obsidian-git) directly.
 
@@ -18,7 +20,7 @@ Or open [Git](obsidian://show-plugin?id=obsidian-git) directly.
 4. Confirm the file tree shows exactly `01 Home`, `02 Notes`, `03 System`, and `Supernote`.
 5. Open [[01 Home/System|System]] and [[01 Home/Dashboard|Dashboard]]. Open loops should be ordinary bullets.
 
-**Current-version checks:** this page says `03 System`; the Dashboard links to [[01 Home/Open loops|Open loops]]; and [[03 System/Documentation/ROADMAP|the roadmap]] is dated 2026-10-02 or later.
+**Current-version checks:** this page says `03 System`; the Dashboard links to [[01 Home/Open loops|Open loops]]; and [[03 System/Documentation/ROADMAP|the roadmap]] is dated 2026-10-04 or later.
 
 ## 2. Confirm the folder settings
 
@@ -34,34 +36,21 @@ These are committed. Check them anyway.
 | Files and links > New link format | Absolute path in vault |
 | Appearance > CSS snippets | `dwell-home` enabled |
 
-## 3. Point the Supernote at the export folder
+## 3. Confirm the capture paths
 
-Handwritten PDFs go in `Supernote/EXPORT/` at the vault root. Copy or sync them there. No filename convention: any PDF in that folder gets picked up.
+- **Grain:** recordings are imported read-only into `03 System/Sources/Grain/`.
+- **Supernote:** keep syncing to the personal Google Drive Export folder. gOS preserves the originals; Dwell-relevant pages are mirrored into `03 System/Sources/Supernote/`.
+- **Dwell notes:** write substantive work notes in `02 Notes/`.
+- **Execution:** committed work belongs in Asana. Plain unresolved questions may remain in [[01 Home/Open loops|Open loops]].
 
-The separate Google Drive router for cross-vault routing is a different channel. Setup for it is in `03 System/Documentation/SUPERNOTE-AUTOMATION.md`.
+The current rules are in [[03 System/Documentation/CAPTURE-CONTRACT|Capture contract]]. Do not copy Supernote files into the vault-root `Supernote/EXPORT/` folder as part of the current workflow.
 
-## 4. Run the automation
+## 4. Prove commit and pull
 
-From the vault root:
+1. Run **Git: Pull** from the command palette.
+2. Add a harmless bullet to [[01 Home/Open loops|Open loops]].
+3. Run **Git: Create backup** or the configured commit-and-sync command.
+4. Confirm Obsidian Git reports a successful push.
+5. Remove the test bullet and sync once more.
 
-```bash
-bash "03 System/Scripts/dwell-sync.sh"
-```
-
-Expect a summary naming what it processed, any flags, and the git result. Needs `bash`, `git`, and `node`.
-
-## 5. Test it end to end
-
-1. Put any PDF in `Supernote/EXPORT/`.
-2. Wait 90 seconds. Files newer than that are held so a half-finished sync is never copied mid-write.
-3. Run the command.
-4. Confirm the PDF and a `.meta.md` sidecar are in `03 System/Inbox/Raw/`.
-
-## Still needs a browser
-
-These cannot be done from a terminal. Put any relevant unresolved question in [[01 Home/Open loops|Open loops]] until it moves to Asana.
-
-1. Confirm unit counts and occupancy for the 6 properties from the rent roll, then fill in `units`, `occupancy`, and `occupancy_as_of` on each property note.
-2. Create the Drive folders named in `03 System/Documentation/SUPERNOTE-AUTOMATION.md`, install the Apps Script, and paste the folder IDs into it.
-3. Create the Claude Code Routine for the DWELL nightly sweep, per `03 System/Documentation/NIGHTLY-OPERATORS.md`.
-4. Add one line to the gOS operating guide naming the DWELL operator in its collision rule. File it as a gOS system request.
+If Git reports conflicts, stop. Preserve the exact error and ask for recovery before choosing a side.

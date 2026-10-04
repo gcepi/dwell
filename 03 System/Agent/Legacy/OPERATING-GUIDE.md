@@ -1,5 +1,7 @@
 # DWELL operating guide
 
+> Historical September 2026 contract. It is retained for archaeology and is not the current operating system. Start at [[01 Home/System|System]].
+
 This is the one contract for how DWELL works and how an agent operates it. `AGENT-VOICE.md` is how it should sound. `NIGHTLY-SWEEP.md` is the step-by-step nightly procedure.
 
 DWELL is Graham's work vault for Dwell Communities. gOS is his personal knowledge and writing vault, in a separate repository. The two systems share a design and share nothing else. Read **The two vaults** below before you move anything across the line.

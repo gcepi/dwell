@@ -1,5 +1,7 @@
 # Supernote automation
 
+> Historical proposal from September 2026. It was never made the current route. Use [[03 System/Documentation/CAPTURE-CONTRACT|Capture contract]] for the live workflow.
+
 A Supernote syncs handwritten exports to Google Drive. Two vaults read from Drive. The filename decides which vault gets a given page.
 
 The rule is a prefix you type once when you name the note on the device.

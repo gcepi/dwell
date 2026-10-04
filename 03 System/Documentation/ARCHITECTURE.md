@@ -8,7 +8,7 @@ Three layers, one job each.
 03 System/   explain and operate it
 ```
 
-`Supernote/EXPORT/` is an intake folder. It is not where knowledge lives.
+The personal Google Drive Export folder is the Supernote intake. gOS preserves every original; Dwell-relevant pages are mirrored into `03 System/Sources/Supernote/`.
 
 ## Home
 
@@ -31,4 +31,4 @@ Every substantive work note lives in `02 Notes/`, regardless of whether it is a 
 
 ## Current dependencies
 
-Grain and Supernote source intake are proven manually. Scheduled Dwell processing and screen control are not assumed live merely because their files exist. Their current state and dates are in [[03 System/Documentation/ROADMAP|Roadmap]]. The routing rule is in [[03 System/Documentation/CAPTURE-CONTRACT|Capture contract]].
+Grain and Supernote source intake are proven manually. Grain is not scheduled, and Dwell has no separate nightly agent. Their current state and dates are in [[03 System/Documentation/ROADMAP|Roadmap]]. The routing rule is in [[03 System/Documentation/CAPTURE-CONTRACT|Capture contract]].
