@@ -54,7 +54,43 @@
       "startedAt": "2026-10-02T17:00:36Z",
       "path": "03 System/Sources/Grain/2026-10-02 - Dwell EliseAI Workflows Training - a0634914.md",
       "importedAt": "2026-10-02T20:56:42.931Z"
+    },
+    "56bedb0c-90e0-4010-87ec-863da1e76df0": {
+      "title": "Clairmont Sync: Delinquencies",
+      "startedAt": "2026-10-05T18:43:15Z",
+      "path": "03 System/Sources/Grain/2026-10-05 - Clairmont Sync Delinquencies - 56bedb0c.md",
+      "importedAt": "2026-10-10T23:01:52.396Z"
+    },
+    "80c6cf69-76af-40d7-9f26-5833789c5c3d": {
+      "title": "Ilion Sync: Leasing, Website & Marketing Strategy",
+      "startedAt": "2026-10-05T20:26:25Z",
+      "path": "03 System/Sources/Grain/2026-10-05 - Ilion Sync Leasing, Website & Marketing Strategy - 80c6cf69.md",
+      "importedAt": "2026-10-10T23:01:52.577Z"
+    },
+    "233a303c-3607-4852-8cd2-cebd32a7f7d3": {
+      "title": "Application Process Walkthrough",
+      "startedAt": "2026-10-06T17:00:25Z",
+      "path": "03 System/Sources/Grain/2026-10-06 - Application Process Walkthrough - 233a303c.md",
+      "importedAt": "2026-10-10T23:01:52.804Z"
+    },
+    "777f07e4-708a-4507-8141-ef71ff2177d2": {
+      "title": "Lease Renewal Meeting",
+      "startedAt": "2026-10-07T14:00:04Z",
+      "path": "03 System/Sources/Grain/2026-10-07 - Lease Renewal Meeting - 777f07e4.md",
+      "importedAt": "2026-10-10T23:01:52.963Z"
+    },
+    "ebbd0d2d-8ce2-4f69-9d0e-5fe7294cface": {
+      "title": "Bill Approval Walkthrough",
+      "startedAt": "2026-10-07T15:01:43Z",
+      "path": "03 System/Sources/Grain/2026-10-07 - Bill Approval Walkthrough - ebbd0d2d.md",
+      "importedAt": "2026-10-10T23:01:53.166Z"
+    },
+    "69ecd786-fb2a-4c63-9f93-e4f631239ae7": {
+      "title": "Clairmont | DQ + Maintenance",
+      "startedAt": "2026-10-07T20:33:07Z",
+      "path": "03 System/Sources/Grain/2026-10-07 - Clairmont DQ + Maintenance - 69ecd786.md",
+      "importedAt": "2026-10-10T23:01:53.344Z"
     }
   },
-  "updatedAt": "2026-10-02T20:56:42.931Z"
+  "updatedAt": "2026-10-10T23:01:53.344Z"
 }
