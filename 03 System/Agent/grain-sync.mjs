@@ -128,7 +128,11 @@ for (const recording of recordings) {
   imported++;
 }
 
-manifest.updatedAt = new Date().toISOString();
-fs.writeFileSync(MANIFEST, `${JSON.stringify(manifest, null, 2)}\n`);
+// A no-op poll must not dirty the repository and block the next unattended
+// pull/rebase. Only persist the manifest when it gained a recording.
+if (imported) {
+  manifest.updatedAt = new Date().toISOString();
+  fs.writeFileSync(MANIFEST, `${JSON.stringify(manifest, null, 2)}\n`);
+}
 console.log(JSON.stringify({ seen: recordings.length, imported, skipped, errors }, null, 2));
 if (errors.length) process.exit(1);
